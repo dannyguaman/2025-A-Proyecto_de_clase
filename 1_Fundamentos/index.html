@@ -1,16 +1,51 @@
-<!DOCTYPE html>   
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ñanEC - Gastronomía de San José</title>
- 
+  <style>
+    h2{
+      /*selector a traves de elemento html estándar */
+      background-color: yellow;
+    }
+
+    /*selector a traves de un identificador*/
+    #subtituloPrincipal{
+      background-color: red;
+    }
+
+    /*selector a traves de una clase */
+    .fila{
+      background-color: antiquewhite;
+    }
+    #subtiltulo{
+      background-color: black;
+
+    }
+    .imgPlato{
+      width: 100px;
+
+    }
+    ul{
+      background-color: azure;
+    }
+  </style>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Bienvenidos a <span style="color: yellow;">ñan</span><span style="color: blue;">E</span><span style="color: red;">C</span></h1>
-    <h2>Bienvenidos a ñanEC</h2>
+  <header> 
+    <h1 style="background-color: aquamarine;">Bienvenidos a <span style="color:yellow; background-color: red;">ñan</span><span style="color:blue">E</span><span style="color:red">C</span></h1>
+    <h2 style="background-color: blue;">Bienvenidos a ñanEC</h2>
+    <h2 id="subtituloPrincipal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, voluptatum.</h2>
+    <h2>Lorem ipsum dolor sit.</h2>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <h2 class="fila">Lorem ipsum dolor sit amet.</h2>
+    <h2 class="fila">Bienvenidos a ñanEC</h2>
+    <h3>Bienvenidos a ñanEC</h3>
+    <h4 class="fila">Bienvenidos a ñanEC</h4>
+    <h4 id="subtiltulo">Bienvenidos a ñanEC</h4>
+    <h5>Bienvenidos a ñanEC</h5>
     <nav>
       <ul>
         <li><a href="#" onclick="showMenu('Inicio')">Inicio</a></li>
@@ -18,6 +53,48 @@
         <li><a href="#" onclick="showMenu('Recetas')">Recetas</a></li>
         <li><a href="#" onclick="showMenu('Eventos')">Eventos</a></li>
       </ul>
+
+      <ol style="background-color: brown;">
+        <li>Entrada</li>
+        <li>Primer</li>
+        <li>Segundo</li>
+        <li>Postre</li>
+      </ol>
+
+      <table>
+        <tr>
+          <th>Plato/precio promoción</th>
+          <th>Promoción 1</th>
+          <th>Promoción 2</th>
+          <th>Promoción 3</th>
+        </tr>
+        <tr>
+          <th>Primer plato</th>
+          <td>4,50</td>
+          <td>5,89</td>
+          <td>6,90</td>
+        </tr>
+        <tr>
+          <th>Segundo plato</th>
+          <td>4,50</td>
+          <td>5,89</td>
+          <td>6,90</td>
+        </tr>
+        <tr>
+          <th>Tercer plato</th>
+          <td>4,50</td>
+          <td>5,89</td>
+          <td>6,90</td>
+        </tr>
+        <tr>
+          <th>Cuarto plato</th> 
+          <td>4,50</td>
+          <td>5,89</td>
+          <td>6,90</td>
+        </tr>
+      </table>
+
+      <img class="imgPlato" src="./imagen/Fritada_ecuatoriana.jpeg" alt="Plato de fritada">
     </nav>
   </header>
   <section id="intro">
@@ -27,6 +104,7 @@
   <footer>
     <p>©  2024 ñanEC - Todos los derechos reservados</p>
   </footer>
-  <script src="./script.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>
