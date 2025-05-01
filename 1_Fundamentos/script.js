@@ -5,6 +5,11 @@ const restaurantes = [
   { nombre: "La Parrilla de San José", tipo: "Parrillada", horario: "12:00 - 23:00", ranking: 4.7 },
   { nombre: "Tortillas tradicionales", tipo: "Tradicinal", horario: "13:00 - 21:00", ranking: 4.2 },
   { nombre: "Guadalajara", tipo: "Comida Mexicana", horario: "10:00 - 20:00" , ranking: 4.6 },
+  { nombre: "Sushi World", tipo: "Comida Japonesa", horario: "11:00 - 22:00", ranking: 4.8 },
+  { nombre: "Pasta Fresca", tipo: "Italiana", horario: "12:00 - 21:00", ranking: 4.3 },
+  { nombre: "Pizza Express", tipo: "Pizzería", horario: "10:00 - 23:00", ranking: 4.1 },
+  { nombre: "El Marisco Feliz", tipo: "Mariscos", horario: "12:00 - 22:00", ranking: 4.9 },
+  { nombre: "Dulce Tentación", tipo: "Postres", horario: "10:00 - 20:00", ranking: 4.4 }
 ];
 
 // Función para renderizar la lista de restaurantes
