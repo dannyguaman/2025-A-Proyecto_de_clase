@@ -1,33 +1,74 @@
 // Vector de restaurantes
 const restaurantes = [
-  { nombre: "Restaurante El Buen Sabor", tipo: "Tradicional", horario: "12:00 - 22:00" },
-  { nombre: "Café del Valle", tipo: "Cafetería", horario: "08:00 - 20:00" },
-  { nombre: "La Parrilla de San José", tipo: "Parrillada", horario: "12:00 - 23:00" },
-  { nombre: "Tortillas tradicionales", tipo: "Tradicinal", horario: "13:00 - 21:00" }
+  {
+    nombre: "Restaurante El Buen Sabor",
+    tipo: "Tradicional",
+    horario: "12:00 - 22:00",
+    reputacion: "5",
+  },
+  {
+    nombre: "Café del Valle",
+    tipo: "Cafetería",
+    horario: "08:00 - 20:00",
+    reputacion: "5",
+  },
+  {
+    nombre: "La Parrilla de San José",
+    tipo: "Parrillada",
+    horario: "12:00 - 23:00",
+    reputacion: "1",
+  },
+  {
+    nombre: "Tortillas tradicionales",
+    tipo: "Tradicinal",
+    horario: "13:00 - 21:00",
+    reputacion: "2",
+  },
+  {
+    nombre: "Cafe don gato",
+    tipo: "Cafetería",
+    horario: "13:00 - 21:00",
+    reputacion: "10",
+  },
+  //añade 20 más restaurantes
 ];
 
 // Función para renderizar la lista de restaurantes
 function renderRestaurantes(lista) {
-  const container = document.getElementById('restaurants-container');
-  container.innerHTML = ''; // Limpiar contenido anterior
+  const container = document.getElementById("restaurants-container");
+  container.innerHTML = ""; // Limpiar contenido anterior
 
-  lista.forEach(restaurante => {
-    const restaurantDiv = document.createElement('div');
-    restaurantDiv.classList.add('restaurant-item');
-    
-    const nombre = document.createElement('h4');
+  lista.forEach((restaurante) => {
+    const restaurantDiv = document.createElement("div");
+    restaurantDiv.classList.add("restaurant-item");
+
+    const nombre = document.createElement("h4");
     nombre.textContent = restaurante.nombre;
-    
-    const tipo = document.createElement('p');
+
+    const tipo = document.createElement("p");
     tipo.textContent = `Tipo de comida: ${restaurante.tipo}`;
-    
-    const horario = document.createElement('p');
+
+    const horario = document.createElement("p");
     horario.textContent = `Horario: ${restaurante.horario}`;
-    
+
+    const reputacion = document.createElement("p");
+    reputacion.textContent = `Reputacion: ${restaurante.reputacion}`;
+
+    const starsContainer = document.createElement("div");
+    starsContainer.classList.add("stars-container");
+
+    // Crear estrellas según la reputación
+    for (let i = 0; i < 5; i++) {
+      const star = document.createElement("span");
+      star.textContent = i < restaurante.reputacion ? "★" : "☆";
+      starsContainer.appendChild(star);
+    }
+
     restaurantDiv.appendChild(nombre);
     restaurantDiv.appendChild(tipo);
     restaurantDiv.appendChild(horario);
-    
+    restaurantDiv.appendChild(reputacion);
+    restaurantDiv.appendChild(starsContainer);
     container.appendChild(restaurantDiv);
   });
 }
@@ -39,15 +80,17 @@ renderRestaurantes(restaurantes);
 function handleSubmit(event) {
   event.preventDefault(); // Previene el comportamiento por defecto del formulario
 
-  const input = document.querySelector('input[name="restaurant-name"]').value.toLowerCase();
-  const resultElement = document.getElementById('search-result');
+  const input = document
+    .querySelector('input[name="restaurant-name"]')
+    .value.toLowerCase();
+  const resultElement = document.getElementById("search-result");
 
   if (input.trim() === "") {
     resultElement.textContent = "Por favor, ingrese un nombre válido.";
     resultElement.style.color = "red";
     renderRestaurantes(restaurantes); // Muestra la lista completa si el campo está vacío
   } else {
-    const resultados = restaurantes.filter(restaurante => 
+    const resultados = restaurantes.filter((restaurante) =>
       restaurante.nombre.toLowerCase().includes(input)
     );
 
@@ -65,6 +108,6 @@ function handleSubmit(event) {
 
 // Función que cambia la imagen al hacer clic
 function changeImage() {
-  const imageElement = document.getElementById('main-image');
+  const imageElement = document.getElementById("main-image");
   imageElement.src = "./img/nuevo_plato.jpg"; // Cambiar la imagen al hacer clic
 }
