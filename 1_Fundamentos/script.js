@@ -1,5 +1,7 @@
 function showMenu(menu) {
-
+  /*console.log(document.getElementById('menuTitle'));
+  document.getElementById('menuTitle').style.backgroundColor = 'yellow'; 
+  */
     const menuTitle = document.getElementById('menuTitle');
     const menuContent = document.getElementById('menuContent');
     

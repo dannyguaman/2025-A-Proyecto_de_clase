@@ -4,13 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ñanEC - Gastronomía de San José</title>
- 
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* selector a través de elemento html estándar */
+    h2 {
+      background-color: yellow;
+    }
+    /* selector a través de un identificador */
+    #subtituloPrincipal {
+      background-color: red;
+    }
+
+    /* Selector a través de una clase */
+    .fila {
+      background-color: burlywood;
+    }
+  </style>
+  <!--link rel="stylesheet" href="styles.css"-->
 </head>
 <body>
   <header>
-    <h1>Bienvenidos a <span style="color: yellow;">ñan</span><span style="color: blue;">E</span><span style="color: red;">C</span></h1>
-    <h2>Bienvenidos a ñanEC</h2>
+    <h1 style="background-color: aqua;">Bienvenidos a <span style="color: yellow; background-color: red;">ñan</span><span style="color: blue;">E</span><span style="color: red;">C</span></h1>
+    <h2 style="background-color: aqua;">Bienvenidos a ñanEC</h2>
+    <h2 id="subtituloPrincipal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, esse!</h2>
+    <h2>Lorem ipsum dolor sit.</h2>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <h2 class="fila">Lorem ipsum dolor sit amet.</h2>
+    <h2 class="fila">Bienvenidos a ñanEC</h2>
+    <h3>Bienvenidos a ñanEC</h3>
+    <h4 class="fila">Bienvenidos a ñanEC</h4>
+    <h5>Bienvenidos a ñanEC</h5>
+    <h6>Bienvenidos a ñanEC</h6>
     <nav>
       <ul>
         <li><a href="#" onclick="showMenu('Inicio')">Inicio</a></li>
@@ -18,6 +41,51 @@
         <li><a href="#" onclick="showMenu('Recetas')">Recetas</a></li>
         <li><a href="#" onclick="showMenu('Eventos')">Eventos</a></li>
       </ul>
+      <ol>
+        <li>Entrada</li>
+        <li>Primer plato</li>
+        <li>Segundo plato</li>
+        <li>Postre</li>
+      </ol>
+      <table>
+        <tr>
+          <th>Plato/precio promoción</th>
+          <th>Promoción 1</th>
+          <th>Promoción 2</th>
+          <th>Promoción 3</th>
+        </tr>
+        <tr>
+          <th>Primer plato</th>
+          <td>4,50</td>
+          <td>5,89</td>
+          <td>6,90</td>
+        </tr>
+        <tr>
+          <th>Segundo plato</th>
+          <td>4,50</td>
+          <td>5,89</td>
+          <td>6,90</td>
+        </tr>
+        <tr>
+          <th>Tercer plato</th>
+          <td>4,50</td>
+          <td>5,89</td>
+          <td>6,90</td>
+        </tr>
+        <tr>
+          <th>Cuarto plato</th>
+          <td>4,50</td>
+          <td>5,89</td>
+          <td>6,90</td>
+        </tr>
+      </table>
+      <img 
+      
+      
+      
+      
+      
+      src="./imágenes/bandera_ecuatoriana.jpg" alt="Plato típica de bandera ecuatoriana">
     </nav>
   </header>
   <section id="intro">
