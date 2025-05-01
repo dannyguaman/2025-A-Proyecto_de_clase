@@ -28,6 +28,7 @@ function renderRestaurantes(lista) {
     const reputacion = document.createElement('p');
     reputacion.textContent = `Calificación: ${restaurante.reputacion} estrellas`;
     
+    
     restaurantDiv.appendChild(nombre);
     restaurantDiv.appendChild(tipo);
     restaurantDiv.appendChild(horario);
