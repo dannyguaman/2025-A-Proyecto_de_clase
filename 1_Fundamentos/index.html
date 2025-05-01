@@ -1,24 +1,52 @@
-<!DOCTYPE html>   
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ñanEC - Gastronomía de San José</title>
- 
-  <link rel="stylesheet" href="styles.css">
+  
+
+   <!---link rel="stylesheet" href="styles.css"-->
+<style>
+
+  ul{
+    background-color: lightgreen;
+    }
+    ol{
+    background-color: lightseagreen;
+    }
+</style>
+   
+  
+
 </head>
 <body>
   <header>
-    <h1>Bienvenidos a <span style="color: yellow;">ñan</span><span style="color: blue;">E</span><span style="color: red;">C</span></h1>
-    <h2>Bienvenidos a ñanEC</h2>
+
+    <h1 style="background-color: rebeccapurple;"><span style="color: pink;">Bienvenidos a</span> <span style="color: yellow; background-color: brown;">ñan</span > <span style="color: blue;">E</span><span style="color: brown;">C</span ></h1>
+    <h2 style="background-color: bisque;">Bienvenidos <span style="color: chartreuse;">a</span> ñanEC</h1>
+    <h3>Bienvenidos a ñanEC</h1>
+    <h4>Bienvenidos a ñanEC</h1>
+    <h5>Bienvenidos a ñanEC</h1>
+    <h6>Bienvenidos a ñanEC</h1>
     <nav>
-      <ul>
+      <ul style = "background-color: lightblue;">
         <li><a href="#" onclick="showMenu('Inicio')">Inicio</a></li>
         <li><a href="#" onclick="showMenu('Restaurantes')">Restaurantes</a></li>
         <li><a href="#" onclick="showMenu('Recetas')">Recetas</a></li>
         <li><a href="#" onclick="showMenu('Eventos')">Eventos</a></li>
+         <!-- <li><a href="#" onclick="showMenu('Contacto')">Contacto</a></li> -->
       </ul>
+      <ol style =" background-color: pink;" >
+        <li><a href="#" onclick="showMenu('Inicio')">Inicio</a></li>
+        <li><a href="#" onclick="showMenu('Restaurantes')">Restaurantes</a></li>
+        <li><a href="#" onclick="showMenu('Recetas')">Recetas</a></li>
+        <li><a href="#" onclick="showMenu('Eventos')">Eventos</a></li>
+        <!-- <li><a href="#" onclick="showMenu('Contacto')">Contacto</a></li> -->
+      </ol>
     </nav>
+
+    <img src="./images.jpg"  alt="Logo de ñanEC" style="width: 200px; height: auto;">
   </header>
   <section id="intro">
     <h2 id="menuTitle">Descubre la mejor gastronomía de San José</h2>
@@ -27,6 +55,7 @@
   <footer>
     <p>©  2024 ñanEC - Todos los derechos reservados</p>
   </footer>
-  <script src="./script.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>
