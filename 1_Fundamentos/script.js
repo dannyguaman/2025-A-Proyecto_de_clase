@@ -27,7 +27,13 @@ function renderRestaurantes(lista) {
     horario.textContent = `Horario: ${restaurante.horario}`;
 
     const reputacion = document.createElement('p');
-    reputacion.textContent = `Reputación: ${restaurante.reputacion}`;
+    let estrellas = '';
+    for (let i = 0; i < restaurante.reputacion; i++) {
+    
+      estrellas += "⭐"; // Agregar estrellas de reputación
+    }
+    reputacion.textContent = `Reputación: ${estrellas}`;
+
     
     restaurantDiv.appendChild(nombre);
     restaurantDiv.appendChild(tipo);
