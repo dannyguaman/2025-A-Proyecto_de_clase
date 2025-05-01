@@ -1,9 +1,10 @@
 // Vector de restaurantes
 const restaurantes = [
-  { nombre: "Restaurante El Buen Sabor", tipo: "Tradicional", horario: "12:00 - 22:00" },
-  { nombre: "Café del Valle", tipo: "Cafetería", horario: "08:00 - 20:00" },
-  { nombre: "La Parrilla de San José", tipo: "Parrillada", horario: "12:00 - 23:00" },
-  { nombre: "Tortillas tradicionales", tipo: "Tradicinal", horario: "13:00 - 21:00" }
+  { nombre: "Restaurante El Buen Sabor", tipo: "Tradicional", horario: "12:00 - 22:00", ranking: 4.5 },
+  { nombre: "Café del Valle", tipo: "Cafetería", horario: "08:00 - 20:00", ranking: 4 },
+  { nombre: "La Parrilla de San José", tipo: "Parrillada", horario: "12:00 - 23:00", ranking: 4.7 },
+  { nombre: "Tortillas tradicionales", tipo: "Tradicinal", horario: "13:00 - 21:00", ranking: 4.2 },
+  { nombre: "Guadalajara", tipo: "Comida Mexicana", horario: "10:00 - 20:00" , ranking: 4.6 },
 ];
 
 // Función para renderizar la lista de restaurantes
@@ -23,10 +24,14 @@ function renderRestaurantes(lista) {
     
     const horario = document.createElement('p');
     horario.textContent = `Horario: ${restaurante.horario}`;
+
+    const ranking = document.createElement('p');
+    ranking.textContent = `Ranking: ${restaurante.ranking}`;
     
     restaurantDiv.appendChild(nombre);
     restaurantDiv.appendChild(tipo);
     restaurantDiv.appendChild(horario);
+    restaurantDiv.appendChild(ranking);
     
     container.appendChild(restaurantDiv);
   });
