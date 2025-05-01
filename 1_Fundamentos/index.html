@@ -1,24 +1,125 @@
-<!DOCTYPE html>   
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ñanEC - Gastronomía de San José</title>
- 
+  <style>
+/*  selector a travez de html estandar  */
+    h2{
+
+      background-color: yellow;
+    }
+
+    h2{
+
+background-color: blueviolet;
+}
+
+/*  selector a travez de un identificador */
+
+#subtituloPrincipal{
+
+  background-color: red;
+}
+
+
+/*  selector a travez de una clase  */
+
+
+.fila{
+
+  background-color: burlywood;
+}
+
+
+.imgPlato{
+
+width: 400px;
+
+
+}
+
+  </style>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>Bienvenidos a <span style="color: yellow;">ñan</span><span style="color: blue;">E</span><span style="color: red;">C</span></h1>
-    <h2>Bienvenidos a ñanEC</h2>
+    <h1 style="background-color: aqua;">Bienvenidos a <span style="color: yellow; background-color: red;">ñan</span><span style="color:blue;">E</span><span style="color: red;">C</span></h1>
+    <h2 id="subtituloPrincipal" class="fila" >Bienvenidos a ñanEC</h2>
+    <h2 class="fila">Lorem ipsum dolor sit.</h2>
+    <h2 class="fila">Lorem, ipsum dolor.</h2>
+    <h3>Bienvenidos a ñanEC</h3>
+    <h4>Bienvenidos a ñanEC</h4>
+    <h5>Bienvenidos a ñanEC</h5>
+    <h6>Bienvenidos a ñanEC</h6>
     <nav>
-      <ul>
+      <ul class="fila">
+        
         <li><a href="#" onclick="showMenu('Inicio')">Inicio</a></li>
         <li><a href="#" onclick="showMenu('Restaurantes')">Restaurantes</a></li>
         <li><a href="#" onclick="showMenu('Recetas')">Recetas</a></li>
         <li><a href="#" onclick="showMenu('Eventos')">Eventos</a></li>
       </ul>
+
+      <ol style="background-color: aqua;"> 
+
+        <li >Entrada</li>
+        <li>Primer Plato</li>
+        <li>Segundo Plato</li>
+        <li>Postre</li>
+        
+      </ol>
     </nav>
+
+<table>
+
+<tr>
+  
+<th>Plato / precio</th>
+<th>promocion 1 </th>
+<th>promocion 2</th>
+<th>promocion 3</th>
+
+</tr>
+
+
+<tr>
+  
+  <th>Primer plato</th>
+  <td>4,60 </td>
+  <td>4</td>
+  <td>5.8</td>
+  
+  </tr>
+
+
+
+  <tr>
+  
+    <th>Primer segundo</th>
+    <td>4,60 </td>
+    <td>4</td>
+    <td>5.8</td>
+    
+    </tr>
+
+
+    <tr>
+  
+      <th>Primer tercer</th>
+      <td>4,60 </td>
+      <td>4</td>
+      <td>5.8</td>
+      
+      </tr>
+
+</table>
+
+
+<img class="imgPlato" src="./imagenes/bandera.jpg" alt="Plato de bandera ecuatoriana">
+<img class="imgPlato" src="./imagenes/bandera.jpg" alt="Plato de bandera ecuatoriana">
+
   </header>
   <section id="intro">
     <h2 id="menuTitle">Descubre la mejor gastronomía de San José</h2>
@@ -27,6 +128,7 @@
   <footer>
     <p>©  2024 ñanEC - Todos los derechos reservados</p>
   </footer>
-  <script src="./script.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>
