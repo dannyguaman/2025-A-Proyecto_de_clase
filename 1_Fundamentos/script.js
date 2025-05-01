@@ -1,19 +1,21 @@
-// Vector de restaurantes
+// Vector de restaurantes //Vector de objetos de java Script
 const restaurantes = [
-  { nombre: "Restaurante El Buen Sabor", tipo: "Tradicional", horario: "12:00 - 22:00" },
-  { nombre: "Café del Valle", tipo: "Cafetería", horario: "08:00 - 20:00" },
-  { nombre: "La Parrilla de San José", tipo: "Parrillada", horario: "12:00 - 23:00" },
-  { nombre: "Tortillas tradicionales", tipo: "Tradicinal", horario: "13:00 - 21:00" }
+  { nombre: "Restaurante El Buen Sabor", tipo: "Tradicional", horario: "12:00 - 22:00", reputacion: 1 },
+  { nombre: "Café del Valle", tipo: "Cafetería", horario: "08:00 - 20:00",reputacion: 3},
+  { nombre: "La Parrilla de San José", tipo: "Parrillada", horario: "12:00 - 23:00", reputacion: 2 },
+  { nombre: "Tortillas tradicionales", tipo: "Tradicinal", horario: "13:00 - 21:00", reputacion: 4},
+  { nombre: "Sabores Zuleteños", tipo: "Tradicinal", horario: "10:00 - 18:00", reputacion: 5},
+  
 ];
 
 // Función para renderizar la lista de restaurantes
-function renderRestaurantes(lista) {
-  const container = document.getElementById('restaurants-container');
+function renderRestaurantes(lista) { 
+  const container = document.getElementById('restaurants-container');// 
   container.innerHTML = ''; // Limpiar contenido anterior
 
-  lista.forEach(restaurante => {
-    const restaurantDiv = document.createElement('div');
-    restaurantDiv.classList.add('restaurant-item');
+  lista.forEach(restaurante => {  //Funcion de orden superior (restaruante es una funcion anonima )
+    const restaurantDiv = document.createElement('div'); // Constante 
+    restaurantDiv.classList.add('restaurant-item'); // <div class = "restarant-item> </div>"
     
     const nombre = document.createElement('h4');
     nombre.textContent = restaurante.nombre;
@@ -23,10 +25,15 @@ function renderRestaurantes(lista) {
     
     const horario = document.createElement('p');
     horario.textContent = `Horario: ${restaurante.horario}`;
+
+    const reputacion = document.createElement('p'); // 
+    reputacion.textContent = `Reputacion: ${restaurante.reputacion}`; // 
+    
     
     restaurantDiv.appendChild(nombre);
     restaurantDiv.appendChild(tipo);
     restaurantDiv.appendChild(horario);
+    restaurantDiv.appendChild(reputacion);
     
     container.appendChild(restaurantDiv);
   });
