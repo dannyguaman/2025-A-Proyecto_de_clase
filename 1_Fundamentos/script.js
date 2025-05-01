@@ -4,6 +4,13 @@ const restaurantes = [
   { nombre: "Café del Valle", tipo: "Cafetería", horario: "08:00 - 20:00" ,reputacion: 2},
   { nombre: "La Parrilla de San José", tipo: "Parrillada", horario: "12:00 - 23:00" ,reputacion: 2},
   { nombre: "Tortillas tradicionales", tipo: "Tradicinal", horario: "13:00 - 21:00",reputacion: 2 }
+  { nombre: "Pasta y Pizza", tipo: "Italiana", horario: "11:00 - 22:00" ,reputacion: 2},
+  { nombre: "Sushi Express", tipo: "Japonesa", horario: "12:00 - 22:00" ,reputacion: 2},
+  { nombre: "El Rincón Mexicano", tipo: "Mexicana", horario: "11:00 - 23:00" ,reputacion: 2},
+  { nombre: "Café Gourmet", tipo: "Cafetería", horario: "08:00 - 20:00" ,reputacion: 2},
+  { nombre: "La Casa de la Pasta", tipo: "Italiana", horario: "12:00 - 22:00" ,reputacion: 2},
+  { nombre: "Tacos al Pastor", tipo: "Mexicana", horario: "11:00 - 23:00" ,reputacion: 2}
+
 ];
 
 // Función para renderizar la lista de restaurantes
