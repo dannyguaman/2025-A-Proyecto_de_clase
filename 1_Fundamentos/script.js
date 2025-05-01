@@ -1,19 +1,25 @@
 // Vector de restaurantes
 const restaurantes = [
-  { nombre: "Restaurante El Buen Sabor", tipo: "Tradicional", horario: "12:00 - 22:00" },
-  { nombre: "Café del Valle", tipo: "Cafetería", horario: "08:00 - 20:00" },
-  { nombre: "La Parrilla de San José", tipo: "Parrillada", horario: "12:00 - 23:00" },
-  { nombre: "Tortillas tradicionales", tipo: "Tradicinal", horario: "13:00 - 21:00" }
+  { nombre: "Restaurante El Buen Sabor", tipo: "Tradicional", horario: "12:00 - 22:00", reputacion: "5"},
+  { nombre: "Café del Valle", tipo: "Cafetería", horario: "08:00 - 20:00", reputacion: "4"},
+  { nombre: "La Parrilla de San José", tipo: "Parrillada", horario: "12:00 - 23:00", reputacion: "5"},
+  { nombre: "Tortillas tradicionales", tipo: "Tradicinal", horario: "13:00 - 21:00", reputacion: "3"},
+  { nombre: "Pasta y Pesto", tipo: "Italiana", horario: "11:00 - 22:00", reputacion: "4"},
+
 ];
 
 // Función para renderizar la lista de restaurantes
 function renderRestaurantes(lista) {
   const container = document.getElementById('restaurants-container');
   container.innerHTML = ''; // Limpiar contenido anterior
+  const reputacionSpans = document.createElement('span');
+  reputacionSpans.classList.add('reputation');
 
   lista.forEach(restaurante => {
     const restaurantDiv = document.createElement('div');
     restaurantDiv.classList.add('restaurant-item');
+    const reputacionSpans = document.createElement('span');
+    reputacionSpans.classList.add('reputation');
     
     const nombre = document.createElement('h4');
     nombre.textContent = restaurante.nombre;
@@ -24,10 +30,14 @@ function renderRestaurantes(lista) {
     const horario = document.createElement('p');
     horario.textContent = `Horario: ${restaurante.horario}`;
     
+    const reputacion = document.createElement('p');
+    reputacion.textContent = `Reputación:`;
+    reputacionSpans.textContent = `${restaurante.reputacion} ⭐`;
+    reputacionSpans.style.color = restaurante.reputacion >= 4 ? 'green' : 'red'; // Cambia el color según la reputación
     restaurantDiv.appendChild(nombre);
     restaurantDiv.appendChild(tipo);
     restaurantDiv.appendChild(horario);
-    
+    restaurantDiv.appendChild(reputacion);
     container.appendChild(restaurantDiv);
   });
 }
