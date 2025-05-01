@@ -1,32 +1,107 @@
-<!DOCTYPE html>   
-<html lang="es">
+<!DOCTYPE html>
+<html lang="es"> <!--para carateriticas de accesibilidad-->
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ñanEC - Gastronomía de San José</title>
- 
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--para que se vea bien en dispositivos moviles-->
+  <title>ñanEC - Gastronomía de San José</title>  <!--definir el nombre de la pestaña--->
+  <!--<link rel="stylesheet" href="styles.css"> --enlaza el archivo CSS-->
+<style>
+  /*Selector a traves de elemento html estandar*/
+  h2 { /*selector*/
+    background-color: yellow; /*regla css*/
+  }
+  /*Selector a traves de un identificador*/
+ #subtituloPrincipal{
+  background-color: red; 
+ }
+  /*Selector a trave sd euna clase*/
+  .fila { /*selector*/
+    background-color: burlywood;
+  }
+  .imgPlato { 
+    width: 400px; 
+    height: 300px; 
+     
+  }
+  #listaOrdenada { 
+    background-color: lightblue; 
+  }
+
+
+</style>
+</head> <!--no se ve en la pagina-->
+<body> <!--cuerpo de la pagina, todo se muestra al usuario-->
   <header>
-    <h1>Bienvenidos a <span style="color: yellow;">ñan</span><span style="color: blue;">E</span><span style="color: red;">C</span></h1>
-    <h2 style="background-color: aqua;">Bienvenidos a ñanEC</h2>
-    <nav>
-      <ul>
-        <li><a href="#" onclick="showMenu('Inicio')">Inicio</a></li>
+    <h1 style="background-color: blueviolet;">Bienvenidos a <span style="color: yellow; background-color:red;"> ñan</span>
+      <span style="color: blue;">E</span><span style="color: red;">C</span></h1>
+    <h2 style="background-color: aqua;">Bienvenidos a ñanEC</h2> <!--Estilo en linea-->
+    <h2 id="subtituloPrincipal">Lorem ipsum dolor sit amet consectetur.</h2>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <h2 class="fila">Lorem, ipsum dolor.</h2> 
+    <h2 class="fila">Lorem ipsum dolor sit amet.</h2>
+    <h3>Bienvenidos a ñanEC</h3>
+    <h4 class="fila">Bienvenidos a ñanEC</h4>
+    <h5>Bienvenidos a ñanEC</h5>
+    <h6>Bienvenidos a ñanEC</h6>
+    <nav> <!--etiqueta para controles de navegacion -->
+      <ul style="background-color: darkolivegreen;"> <!--lista no ordenada-->
+        <li><a href="#" onclick="showMenu('Inicio')">Inicio</a></li> <!--onclick registra un-->
         <li><a href="#" onclick="showMenu('Restaurantes')">Restaurantes</a></li>
         <li><a href="#" onclick="showMenu('Recetas')">Recetas</a></li>
         <li><a href="#" onclick="showMenu('Eventos')">Eventos</a></li>
       </ul>
+      <ol id="listaOrdenada"> <!--lista ordenada-->
+        <li>Entrada</li>
+        <li>Primer Plato</li>
+        <li>Segundo Plato</li>
+        <li>Postre</li>
+      </ol>
+
+      <table style="background-color: lightcoral;">
+        <tr>
+          <th>Plato/Precio promocion</th>
+          <th>Promocion 1</th>
+          <th>Promocion 2</th>
+          <th>Promocion 3</th>
+        </tr>
+        <tr>
+          <th>Primer plato</th>
+          <td>4.50</td>
+          <td>5.89</td>
+          <td>6.90</td>
+        </tr>
+        <tr>
+          <th>Segundo plato</th>
+          <td>4.50</td>
+          <td>5.89</td>
+          <td>6.90</td>
+        </tr>
+        <tr><th>Tercero plato</th>
+          <td>4.50</td>
+          <td>5.89</td>
+          <td>6.90</td></tr>
+        <tr>
+          <th>Cuarto plato</th>
+          <td>4.50</td>
+          <td>5.89</td>
+          <td>6.90</td>
+        </tr>
+
+      </table>
+
+      <img class="imgPlato" src="./imagenes/Encebollado.jpg" alt="Plato de Encebollado">
+      <img class="imgPlato" src="./imagenes/Fritada.jpg" alt="Plato de Fritada">
+      
     </nav>
   </header>
-  <section id="intro">
+  <section id="intro"> <!--etiqueta para secciones-->
     <h2 id="menuTitle">Descubre la mejor gastronomía de San José</h2>
     <p id="menuContent">Explora los mejores restaurantes y platos típicos de la región.</p>
   </section>
-  <footer>
+  <footer> <!--etiqueta para el pie de paginam, html 5 -->
     <p>©  2024 ñanEC - Todos los derechos reservados</p>
   </footer>
-  <script src="./script.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>
