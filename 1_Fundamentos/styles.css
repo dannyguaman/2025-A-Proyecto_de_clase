@@ -103,4 +103,9 @@ footer {
   font-size: 1em;
   color: #666;
 }
+
+.reputationñ {
+  font-weight: bold;
+  color: #e67e22; /* Color naranja para la reputación */
+}
 /* Fin de código nuevo */
