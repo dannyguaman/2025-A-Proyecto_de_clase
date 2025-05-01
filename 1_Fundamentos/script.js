@@ -1,5 +1,11 @@
-function showMenu(menu) {
 
+
+function showMenu(menu) {
+  /*
+  console.log(document.getElementById("menuContent").style.backgroundColor = "blue");
+  */
+  
+  console.log("Selecciono la opcion de", {menu})
     const menuTitle = document.getElementById('menuTitle');
     const menuContent = document.getElementById('menuContent');
     
@@ -8,7 +14,6 @@ function showMenu(menu) {
   
     // Cambiar el contenido según el menú seleccionado
     switch(menu) {
-      
       case 'Inicio':
         menuContent.textContent = 'Bienvenido a la página de inicio de ñanEC.';
         document.getElementById('intro').style.backgroundColor = '#f0f0f0';
@@ -28,4 +33,4 @@ function showMenu(menu) {
     }
         
   }
- 
+  

@@ -1,24 +1,117 @@
-<!DOCTYPE html>   
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ñanEC - Gastronomía de San José</title>
-<!--
+  <style>
+    h2
+    {
+      background-color: red
+    }
+    #subtituloPrincipal
+    {
+      background-color:rgb(234, 245, 79);
+    }
+    #subtituloSecundario
+    {
+      background-color:rgb(60, 8, 86)
+    }
+    .fila
+    {
+      background-color:chartreuse;
+    }
+    a{
+      color: gray;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .imgPlato
+    {
+      width: 500px;
+      
+
+    }
+    ul{
+      background-color:chartreuse;
+    }
+  </style>
+  <!---
   <link rel="stylesheet" href="styles.css">
-  -->
+    -->
+        
 </head>
 <body>
   <header>
-    <h1>Bienvenidos a <span style="color: yellow;">ñan</span><span style="color: blue;">E</span><span style="color: red;">C</span></h1>
-    <h2>Bienvenidos a ñanEC</h2>
+    <h1 style="background-color: gray;">Bienvenidos a <span style="color: yellow;">ñan</span><span style="color: blue;">E</span><span style="color: red;">C</span></h1>
+    <h2 style="background-color: cadetblue;">Bienvenidos a ñanEC</h2>
+    <h3>Bienvenidos a ñanEC</h3>
+    <h2>Este es un elemento HTML normal</h2>
+    <h2 class="fila">Este item HTML pertenence a una clase.</h2>
+    <h2  id="subtituloPrincipal">Este item HTML tiene ID</h2>
+    <h2 class="fila" id="subtituloPrincipal">Este item HTML tiene clase e ID</h2>
+    <h2 id="subtituloPrincipal" class="fila" style="background-color: rgb(45, 84, 6);">Este item HTML tiene clase e ID y estilo en linea</h2>
+    <h2 style="background-color: rgb(8, 66, 117);" style="background-color: brown;">hola</h2>
+    <h2 style="background-color: brown;" style="background-color: aliceblue;">hola</h2>
+    <h2 id="subtituloPrincipal" id="subtituloSecundario">hola</h2>
+    <h2 id="subtituloSecundario" id="subtituloPrincipal">hola</h2>
+    <h4>Bienvenidos a ñanEC</h4>
+    <h5>Bienvenidos a ñanEC</h5>
+    <h6>Bienvenidos a ñanEC</h6>
+
+
     <nav>
+      <!--ul por defecto es tipo bloque-->
       <ul>
         <li><a href="#" onclick="showMenu('Inicio')">Inicio</a></li>
         <li><a href="#" onclick="showMenu('Restaurantes')">Restaurantes</a></li>
         <li><a href="#" onclick="showMenu('Recetas')">Recetas</a></li>
         <li><a href="#" onclick="showMenu('Eventos')">Eventos</a></li>
       </ul>
+      <ol style="background-color: bisque;">
+        <li>Entrada</li>
+        <li style="background-color: aquamarine;">Primer Plato</li>
+        <li>Segundo Plato</li>
+        <li>Postre</li>
+      </ol>
+      <span style="display: inline-block; background-color: orange;">
+        <table>
+          <tr>
+            <th>Plato/Precio promoción</th>
+            <th>Promoción 1</th>
+            <th>Promocion 2</th>
+            <th>Promoción 3</th>
+          </tr>
+          <tr>
+            <th>Primer plato</th>
+            <td>1.5</td>
+            <td>2.6</td>
+            <td>4.5</td>
+          </tr>
+          <tr>
+            <th>Segundo Plato</th>
+            <td>1.25</td>
+            <td>7.25</td>
+            <td>3.2</td>
+          </tr>
+          <tr>
+            <th>Tercer Plato</th>
+            <td>6.35</td>
+            <td>6.55</td>
+            <td>4.2</td>
+          </tr>
+          <tr>
+            <th>Cuarto Plato</th>
+            <td>2.65</td>
+            <td>9.45</td>
+            <td>3.22</td>
+          </tr>
+        </table>
+      </span>
+      <br>
+
+      <img src="./Imagenes/descarga.jpeg" alt="Rica fritada con mote, tortillas de papa, maduro frito y ensalda" class="imgPlato">
+      <img src="./Imagenes/platos-tipicos-que-comer-en-ecuador-encebollado.jpg" alt="Plato con Ceviche de Camarón Ecuatoriano" class="imgPlato">      
     </nav>
   </header>
   <section id="intro">
@@ -28,6 +121,7 @@
   <footer>
     <p>©  2024 ñanEC - Todos los derechos reservados</p>
   </footer>
+
   <script src="./script.js"></script>
 </body>
 </html>
