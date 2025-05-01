@@ -1,9 +1,11 @@
-// Vector de restaurantes
+// Vector de restaurantes, este vector contiene objetos de java script con formato json 
+// Esta constante es una funcion anónima que hace uso de funciones flecha 
 const restaurantes = [
-  { nombre: "Restaurante El Buen Sabor", tipo: "Tradicional", horario: "12:00 - 22:00" },
-  { nombre: "Café del Valle", tipo: "Cafetería", horario: "08:00 - 20:00" },
-  { nombre: "La Parrilla de San José", tipo: "Parrillada", horario: "12:00 - 23:00" },
-  { nombre: "Tortillas tradicionales", tipo: "Tradicinal", horario: "13:00 - 21:00" }
+  { nombre: "Restaurante Pancho Villa", tipo: "Tradicional", horario: "12:00 - 22:00", reputacion:5 },
+  { nombre: "Café del Valle", tipo: "Cafetería", horario: "08:00 - 20:00", reputacion:4 },
+  { nombre: "La Parrilla de San José", tipo: "Parrillada", horario: "12:00 - 23:00", reputacion:3 },
+  { nombre: "Tortillas tradicionales", tipo: "Tradicinal", horario: "13:00 - 21:00", reputacion:4 },
+  { nombre: "Pasta y Pizza", tipo: "Italiana", horario: "11:00 - 22:00", reputacion:5 },
 ];
 
 // Función para renderizar la lista de restaurantes
@@ -11,6 +13,7 @@ function renderRestaurantes(lista) {
   const container = document.getElementById('restaurants-container');
   container.innerHTML = ''; // Limpiar contenido anterior
 
+  // Esto es un funcion flecha que recorre el vector de restaurantes y crea un div para cada uno de ellos
   lista.forEach(restaurante => {
     const restaurantDiv = document.createElement('div');
     restaurantDiv.classList.add('restaurant-item');
@@ -23,10 +26,17 @@ function renderRestaurantes(lista) {
     
     const horario = document.createElement('p');
     horario.textContent = `Horario: ${restaurante.horario}`;
+
+    const reputacion = document.createElement('p');
+    reputacion.classList.add('reputacion'); // Añadir clase para estilos
+    reputacion.classList.add('span'); // Añadir clase para estilos
+    reputacion.textContent = `Reputación: ${'★'.repeat(restaurante.reputacion)}`; // Muestra estrellas según la reputación
     
+
     restaurantDiv.appendChild(nombre);
     restaurantDiv.appendChild(tipo);
     restaurantDiv.appendChild(horario);
+    restaurantDiv.appendChild(reputacion);
     
     container.appendChild(restaurantDiv);
   });
