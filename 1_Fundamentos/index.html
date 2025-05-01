@@ -1,23 +1,107 @@
-<!DOCTYPE html>   
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ñanEC - Gastronomía de San José</title>
- 
+  <style>
+    /*Selector a través de un identificador*/ 
+    #subtituloPrincipal{
+      background-color: red;
+    }
+    /*Selector a través de un identificador*/
+    #subtituloSecundario{
+      background-color: purple;
+    }
+    /*Selector a través de un identificador*/
+    #subtituloTerceario{
+      background-color: orange;
+    }
+    /*Selector a través de una clase*/
+    .fila{
+      background-color: green;
+    }
+    /*Selector a través de una clase para imagen, podemos configurar el ancho y el alto pero es mejor solo poner uno para que la imagen se escale de forma automática*/
+    .imgPlato{
+      width: 400px;
+      border-radius: 50%;
+      border: 5px solid black;
+    }
+    /*Selector a través de elemento htmal estándar*/
+    h2{
+      background-color: yellow;
+    }
+    /*Selector a través de elemento htmal estándar- si tienen la misma propiedad triunfa la última porque se aplican en cascada*/
+    h2{
+      background-color: pink;
+    }
+    /*Selector a través de elemento htmal estándar*/
+    ol{
+      background-color: lightblue;
+    }
+
+  </style>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>Bienvenidos a <span style="color: yellow;">ñan</span><span style="color: blue;">E</span><span style="color: red;">C</span></h1>
-    <h2>Bienvenidos a ñanEC</h2>
-    <nav>
-      <ul>
+    <h1 style="background-color: aqua;">Bienvenidos a <span style="color: yellow;">ñan</span><span style="color: blue;">E</span><span style="color: red;">C</h1>
+    <h2 style="background-color: blue;"> Bienvenidos a ñanEC</h2>
+    <h2 id="subtituloPrincipal">Bienvenidos a ñanEC</h2>
+    <h2>Lorem ipsum dolor sit.</h2>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+    <h2 class="fila" id="subtituloSecundario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</h2>
+    <h2 class="fila" id="subtituloTerceario" style="background-color: cadetblue;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</h2>
+    <h3>Bienvenidos a ñanEC</h3>
+    <h4>Bienvenidos a ñanEC</h4>
+    <h5 class="fila">Bienvenidos a ñanEC</h5>
+    <h6>Bienvenidos a ñanEC</h6>
+      <nav>
+      <ul style="background-color: blueviolet;">
+        <!-- Colocamos # para que el no desplazarnos hacia otra pestaña, nos quedamos ahí -->
+         <!--El onclick nos permite registrar el callbakc, es decir, cuando se produzca un evento ahi recien se ejecuta la funcion showMenu-->
         <li><a href="#" onclick="showMenu('Inicio')">Inicio</a></li>
+          <!--this hace referencia al elemento html estandar en el cual se encuentra ubicado, es decir la etiqueta y sus atributos. Me permite realizar aplicaciones mas interactivas-->
         <li><a href="#" onclick="showMenu('Restaurantes')">Restaurantes</a></li>
         <li><a href="#" onclick="showMenu('Recetas')">Recetas</a></li>
         <li><a href="#" onclick="showMenu('Eventos')">Eventos</a></li>
       </ul>
+      <ol>
+        <li>Entrada</li>
+        <li>Primer Plato</a></li>
+        <li>Segundo Plato</a></li>
+        <li>Postre</a></li>
+      </ol>
+      <table>
+        <tr> 
+          <th>Plato/Precio Promocion</th>
+          <th>Promocion 1</th>
+          <th>Promocion 2</th>
+          <th>Promocion 3</th>
+        </tr>
+        <tr>
+          <th>Primer Plato</th>
+          <td>4,50</td>
+          <td>5,89</td>
+          <td>6,90</td>
+        </tr>
+        <tr>
+          <th>Segundo Plato</th>
+          <td>5,50</td>
+          <td>6,89</td>
+          <td>7,90</td>
+        </tr>
+        <tr>
+          <th>Postre</th>
+          <td>2,50</td>
+          <td>3,89</td>
+          <td>4,90</td>
+        </tr>
+      </table>
+      <!-- Colocamos ./ como referencia al directorio actual en el que nos encontramos-->
+      <img class="imgPlato" src="./Imagenes/Comida2.jpg" alt="Plato de encebollado /comida tipica ecuatoriana">
+      <!-- Colocamos ../  como referencia para regresar al directorio anterior o directorio padre-->
+      <img class="imgPlato" src="./Imagenes/Comida1.jpg" alt="Plato de comida tipica ecuatoriana">
     </nav>
   </header>
   <section id="intro">
@@ -27,6 +111,8 @@
   <footer>
     <p>©  2024 ñanEC - Todos los derechos reservados</p>
   </footer>
-  <script src="./script.js"></script>
+  <!--La etiqueta script es de html y nos permite vincular archivos js-->
+  <!--La ubicacion que referencia a un script js debe ser correctamente ubicado, es decir como el DOM va en cascada el vinculo del js debe ir al final despu[es de crear todos los elementos-->>
+  <script src="script.js"></script>
 </body>
 </html>
