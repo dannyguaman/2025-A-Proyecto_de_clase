@@ -1,21 +1,21 @@
 // Vector de restaurantes
 const restaurantes = [
-  { nombre: "Restaurante El Buen Sabor", tipo: "Tradicional", horario: "12:00 - 22:00" },
-  { nombre: "Café del Valle", tipo: "Cafetería", horario: "08:00 - 20:00" },
-  { nombre: "La Parrilla de San José", tipo: "Parrillada", horario: "12:00 - 23:00" },
-  { nombre: "Tortillas tradicionales", tipo: "Tradicinal", horario: "13:00 - 21:00" }
+  { nombre: "Restaurante El Buen Sabor", tipo: "Tradicional", horario: "12:00 - 22:00", reputacion: "5" },
+  { nombre: "Café del Valle", tipo: "Cafetería", horario: "08:00 - 20:00", reputacion: "4" },
+  { nombre: "La Parrilla de San José", tipo: "Parrillada", horario: "12:00 - 23:00", reputacion: "3" },
+  { nombre: "Tortillas tradicionales", tipo: "Tradicinal", horario: "13:00 - 21:00", reputacion: "2" }
 ];
 
 // Función para renderizar la lista de restaurantes
 function renderRestaurantes(lista) {
-  const container = document.getElementById('restaurants-container');
-  container.innerHTML = ''; // Limpiar contenido anterior
+  const container = document.getElementById('restaurants-container'); //retorna una referencia hacia el DOM
+  container.innerHTML = ''; // Limpiar contenido anterior para que no se ponga uno encima de otro// limpia todo lo que esta en ese div ese contenedor 
 
-  lista.forEach(restaurante => {
+  lista.forEach(restaurante => { //funion anaonima 
     const restaurantDiv = document.createElement('div');
-    restaurantDiv.classList.add('restaurant-item');
+    restaurantDiv.classList.add('restaurant-item'); // ver cuaderno 
     
-    const nombre = document.createElement('h4');
+    const nombre = document.createElement('h4'); //se coloca el nombre de restaurante <h4> nombre del primer resstaurante<h4>
     nombre.textContent = restaurante.nombre;
     
     const tipo = document.createElement('p');
@@ -23,12 +23,15 @@ function renderRestaurantes(lista) {
     
     const horario = document.createElement('p');
     horario.textContent = `Horario: ${restaurante.horario}`;
+
+    const reputacion = document.createElement('P');
+    reputacion.textContent = `Reputacion: ${restaurante.reputacion}`;
     
-    restaurantDiv.appendChild(nombre);
+    restaurantDiv.appendChild(nombre);// se coloca dentro de div y se tiene la estructura 
     restaurantDiv.appendChild(tipo);
     restaurantDiv.appendChild(horario);
     
-    container.appendChild(restaurantDiv);
+    container.appendChild(restaurantDiv); // se actualiza el DOM
   });
 }
 
