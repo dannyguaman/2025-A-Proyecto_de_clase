@@ -1,9 +1,9 @@
 // Vector de restaurantes
 const restaurantes = [
-  { nombre: "Restaurante El Buen Sabor", tipo: "Tradicional", horario: "12:00 - 22:00" },
-  { nombre: "Café del Valle", tipo: "Cafetería", horario: "08:00 - 20:00" },
-  { nombre: "La Parrilla de San José", tipo: "Parrillada", horario: "12:00 - 23:00" },
-  { nombre: "Tortillas tradicionales", tipo: "Tradicinal", horario: "13:00 - 21:00" }
+  { nombre: "Restaurante El Buen Sabor", tipo: "Tradicional", horario: "12:00 - 22:00" , Reputacion:2},
+  { nombre: "Café del Valle", tipo: "Cafetería", horario: "08:00 - 20:00", Reputacion:3 },
+  { nombre: "La Parrilla de San José", tipo: "Parrillada", horario: "12:00 - 23:00", Reputacion:5 },
+  { nombre: "Tortillas tradicionales", tipo: "Tradicinal", horario: "13:00 - 21:00", Reputacion:4 }
 ];
 
 //son objetos de Javascript, que contienen atributos: propiedades y valores. En este caso, 
@@ -43,10 +43,14 @@ function renderRestaurantes(lista) {
     // y se guarda en la constante tipo del primer elemento
     horario.textContent = `Horario: ${restaurante.horario}`;
     
+    const reputacion = document.createElement('p');  // Crea un nuevo elemento p para la reputación del restaurante
+    // y se guarda en la constante tipo del primer elemento
+    reputacion.textContent = `Reputación: ${restaurante.Reputacion}`;
     restaurantDiv.appendChild(nombre);  // Agrega el elemento nombre al div del restaurante
     // appendChild es un metodo que agrega un elemento hijo a un elemento padre, en este caso el nombre es el hijo y restaurantDiv es el padre
     restaurantDiv.appendChild(tipo);
     restaurantDiv.appendChild(horario);
+    restaurantDiv.appendChild(reputacion); // Agrega el elemento reputacion al div del restaurante
     
     container.appendChild(restaurantDiv); // Agrega el div del restaurante al contenedor principal, es decir, actualizamos el div restaurants-container.
   });
