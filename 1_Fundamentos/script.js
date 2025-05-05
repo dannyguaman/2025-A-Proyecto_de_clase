@@ -2,10 +2,12 @@
 //Objeto de javascript
 //Se parece a un JASON (CLAVE,SECCION)
 const restaurantes = [
-  { nombre: "Restaurante El Buen Sabor", tipo: "Tradicional", horario: "12:00 - 22:00",reputacion: 2 },
+  { nombre: "Restaurante El Buen Sabor", tipo: "Tradicional", horario: "12:00 - 22:00", reputacion: 5},
   { nombre: "Café del Valle", tipo: "Cafetería", horario: "08:00 - 20:00", reputacion: 3 },
   { nombre: "La Parrilla de San José", tipo: "Parrillada", horario: "12:00 - 23:00", reputacion: 4 },
   { nombre: "Tortillas tradicionales", tipo: "Tradicinal", horario: "13:00 - 21:00", reputacion: 5 },
+  { nombre: "Pasta y Pizza", tipo: "Italiana", horario: "11:00 - 22:00", reputacion: 4 },
+  
 
 ];
 
@@ -34,15 +36,15 @@ function renderRestaurantes(lista) {
     const horario = document.createElement('p'); // Crear un nuevo elemento html p para el horario variable invertida con el nombre de la variable
     horario.textContent = `Horario: ${restaurante.horario}`;// Asignar el horario al elemento p 
 
+   //agrega un nuevo atributo al div del restaurante llamado reputacion y le asigna un valor de 5
+   const reputacion = document.createElement('p'); // Crear un nuevo elemento html p para la reputacion
+   reputacion.textContent = `Reputación: ${restaurante.reputacion}`; // Asignar la reputación al elemento p, usando un bucle para repetir el caracter ★
+
     restaurantDiv.appendChild(nombre); // Agregar el elemento h4 al div del restaurante 
     restaurantDiv.appendChild(tipo); // Agregar el elemento p del tipo de comida al div del restaurante
     restaurantDiv.appendChild(horario); // Agregar el elemento p del horario al div del restaurante
+    restaurantDiv.appendChild(reputacion); // Agregar el elemento p de la reputacion al div del restaurante
 
-    
-    //agrega un nuevo atributo al div del restaurante llamado reputacion y le asigna un valor de 5
-    restaurantDiv.setAttribute('reputacion', '5'); // Agregar un nuevo atributo al div del restaurante  
-    
-    
     container.appendChild(restaurantDiv); // Agregar el div del restaurante al contenedor principal, aqui se actualiza el DOM
   });
 }
