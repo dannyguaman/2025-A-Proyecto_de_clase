@@ -27,12 +27,9 @@ function renderRestaurantes(lista) {
     horario.textContent = `Horario: ${restaurante.horario}`;
 
     const reputacion = document.createElement('p');
-    const reputa = document.createElement('span');
-    reputa.textContent = restañutacion;
-    reputacion.textContent = `Reputación: ${reputa.textContent}`;
+    reputacion.textContent = `Reputación: ${restaurante.reputacion}`;
 
-    reputa.classList.add('reputation');
-
+    reputacion.style.color = restaurante.reputacion > 3 ? 'green' : 'red'; // Cambia el color según la reputación
     
     restaurantDiv.appendChild(nombre);
     restaurantDiv.appendChild(tipo);
