@@ -5,7 +5,7 @@ const restaurantes = [
   { nombre: "La Parrilla de San José", tipo: "Parrillada", horario: "12:00 - 23:00", reputacion: 2 },
   { nombre: "Tortillas tradicionales", tipo: "Tradicinal", horario: "13:00 - 21:00", reputacion: 4},
   { nombre: "Sabores Zuleteños", tipo: "Tradicinal", horario: "10:00 - 18:00", reputacion: 5},
-  
+
 ];
 
 // Función para renderizar la lista de restaurantes
