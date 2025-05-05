@@ -1,29 +1,26 @@
-<style type="text/css">
-    * {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    }
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
-    h1{
-        background-color: black;
-        color: cyan;
-    }
-    span#firstLetters{
-        color: white;
-    }
+h1{
+    background-color: black;
+    color: cyan;
+}
+span#firstLetters{
+    color: white;
+}
 
-    h2{
-        background-color: darkblue;  
-        color: white;
-        text-align: center;
-        font-style: italic;
-    }
+h2{
+    background-color: darkblue;  
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
 
-    h3{
-        background-color: lightskyblue; 
-        color: black;
-        text-align: right;
-        text-decoration: underline;
-    }
+h3{
+    background-color: lightskyblue; 
+    color: black;
+    text-align: right;
+    text-decoration: underline;
+}
 
-</style>
-    
