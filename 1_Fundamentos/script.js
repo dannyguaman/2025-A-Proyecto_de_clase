@@ -5,6 +5,8 @@ const restaurantes = [
   { nombre: "La Parrilla de San José", tipo: "Parrillada", horario: "12:00 - 23:00", reputacion: 3 },
   { nombre: "Tortillas tradicionales", tipo: "Tradicinal", horario: "13:00 - 21:00", reputacion: 4 },
   { nombre: "Dulcería Buen Sabor", tipo: "Dulcería", horario: "08:00 - 18:00", reputacion: 5 },
+
+  
 ];
 
 // Función para renderizar la lista de restaurantes
@@ -28,7 +30,7 @@ function renderRestaurantes(lista) {
     const reputacion = document.createElement('p');
     reputacion.textContent = `Calificación: ${restaurante.reputacion} estrellas`;
     
-    
+
     restaurantDiv.appendChild(nombre);
     restaurantDiv.appendChild(tipo);
     restaurantDiv.appendChild(horario);
