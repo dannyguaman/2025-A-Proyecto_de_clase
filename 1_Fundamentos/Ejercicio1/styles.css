@@ -4,20 +4,23 @@
 
 h1 {
     background-color: black;
-    color:cyan
+    color: cyan
 }
-span#firstLetters{
-    color:white;
+
+span#firstLetters {
+    color: white;
 }
+
 h2 {
     background-color: darkblue;
-    color:white;
+    color: white;
     text-align: center;
     font-style: italic;
 }
+
 h3 {
     background-color: skyblue;
-    color:black;
+    color: black;
     text-align: right;
     text-decoration: underline;
 }
