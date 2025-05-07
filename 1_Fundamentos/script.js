@@ -38,8 +38,9 @@ function renderRestaurantes(lista) {
       estrellas.appendChild(estrella);
     }
 
-    restaurantDiv.appendChild(estrellas);
+    // Agregar los elementos al div del restaurante
 
+    restaurantDiv.appendChild(estrellas);
     restaurantDiv.appendChild(nombre);
     restaurantDiv.appendChild(tipo);
     restaurantDiv.appendChild(horario);
@@ -48,6 +49,7 @@ function renderRestaurantes(lista) {
     container.appendChild(restaurantDiv);
   });
 }
+
 
 // Renderiza la lista completa de restaurantes al cargar la página
 renderRestaurantes(restaurantes);
