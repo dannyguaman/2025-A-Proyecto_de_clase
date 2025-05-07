@@ -35,7 +35,7 @@
     background-color: cyan;
     border: 3px solid cyan;
 }
-
+/* Pseudoclase */
 #btnAyuda:active{
     background-color: grey;
     border: 3px solid grey;
@@ -48,4 +48,14 @@
     color: white;
     font-size: 14pt;
     box-shadow: 5px 5px 5px black;
+}
+.formulario {
+    height: 1000px;
+}
+#btnSubmit{
+    margin-top: 20px;
+    background-color: blue;
+    color: white;
+    width: 20%;
+    height: 10%;
 }
