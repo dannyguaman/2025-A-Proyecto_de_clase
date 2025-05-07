@@ -1,5 +1,6 @@
 * {
-    margin: 15px;
+    margin: 20px;
+    height: 50%;
 }
 
 #btnBuscar {
@@ -55,4 +56,26 @@
 
 #btnLogin:hover {
     background-color: deepskyblue;
+}
+
+#btnLogin:active {
+    background-color: darkblue;
+    box-shadow: 2px 2px 1px dodgerblue
+}
+
+#btnSubmit {
+    color: white;
+    background-color: darkblue;
+    margin-top: 20px;
+    width: 20%;
+    height: 40%;
+
+}
+
+#btnSubmit:hover {
+    background-color: blue;
+}
+#btnSubmit:active {
+    background-color: dodgerblue;
+    border: 2px solid black;
 }
