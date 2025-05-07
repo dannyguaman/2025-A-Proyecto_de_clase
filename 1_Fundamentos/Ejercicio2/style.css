@@ -1,0 +1,68 @@
+
+   * {margin: 15px
+}
+#btnBuscar {
+    border-radius: 20px;
+    width: 150px;
+    height: 30px;
+    margin-bottom: 0px;
+    color: darkcyan;
+    border: 3px solid darkcyan;
+    font-size:  12pt;
+}
+
+#btnBuscar:hover {
+    border: 3px solid cyan;
+}
+#btnBuscar:active {
+    border: 3px solid gray;
+}
+
+#btnAyuda{
+border-radius: 45px;
+width: 45px;
+height: 45px;
+margin-top: 10px;
+margin-bottom: 10px;
+color :white;
+font-size: 20pt;
+background-color: darkcyan;
+border: 3px solid darkcyan;
+}
+
+#btnAyuda:hover{
+    background-color: cyan;
+    border: 3px solid cyan;
+}
+
+#btnAyuda:active{
+    background-color: gray;
+    border: 3px solid gray;
+}
+
+#btnLogin{
+ 
+    width: 200px;
+    height: 35px;
+    margin-bottom: 0px;
+    color: white;
+    background-color: dodgerblue;
+    box-shadow: 5px 5px 1px black;
+    font-size:  14pt;
+}
+
+.formulario{
+  
+    height: 1000px;
+  
+}
+
+#btnSubmit{
+    margin-top: 20px;
+    color: white;
+    background-color: rgb(30, 45, 255);
+    width: 20%;
+    height: 10%;
+  
+}
+
