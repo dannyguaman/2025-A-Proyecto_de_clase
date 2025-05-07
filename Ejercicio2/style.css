@@ -1,7 +1,24 @@
+/* 1era solucion, esta comentada.
+Aqui se agrega un tamaño especifico al contenedor padre, en este caso body
+se agrega un tamaño de 100px de alto y 15px de margen, el margen es el espacio
+que queda entre el contenedor y el borde de la ventana, en este caso 15px
+*/
+
 body * {
+   /* height: 100px;*/
     margin: 15px;
 }
 
+/* 2da solucion, no esta comentada.
+Aqui se agrega un tamaño especifico al contenedor padre, en este caso divBuscar
+se agrega un tamaño de 400px de alto y 100px de margen, el margen es el espacio
+que queda entre el contenedor y el borde de la ventana.
+*/
+#divBuscar {
+    width: 400px;
+    height: 100px;
+    
+}
 #btnBuscar {
     border-radius: 20px;
     width: 150px;
@@ -9,10 +26,10 @@ body * {
     ;
     margin-bottom: 0px;
     color: darkcyan;
-    border: 3px solid darkcyan;
+    border: 3px solid darkcyan; /*Aqui se tiene 3px, ancho del borde, y color del borde*/
     font-size: 12pt;
 }
-
+/* #btnBuscar:hover es el efecto que se aplica cuando el mouse pasa por encima del botón, los : quiere decir una pseudo clase*/
 #btnBuscar:hover {
     border: 3px solid cyan;
 }
@@ -52,3 +69,30 @@ body * {
     font-size: 14pt;
     box-shadow: 5px 5px 1px black;
 }
+#btnLogin:hover {
+    border: 3px solid cyan;
+}
+
+#btnLogin:active {
+    border: 3px solid grey;
+}
+
+/*Nuevo boton submit, solicitado en clase a 20 px de distancia del boton iniciar sesion*/
+
+#btnSubmit {
+    width: 20%;
+    height: 100%;
+    margin-top: 20px;
+    background-color: blue;
+    color: white;
+    font-size: 12pt;
+    /*box-shadow: 5px 5px 1px black;*/
+}
+#btnSubmit:hover {
+    border: 3px solid cyan;
+}
+
+#btnSubmit:active {
+    border: 3px solid grey;
+}
+
