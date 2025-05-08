@@ -1,0 +1,39 @@
+    
+    div {
+        background-color: gray;
+    }
+    
+    
+    /*#caja1 {
+        display: inline-block;
+        width: 24%;
+    }
+
+    #caja2 {
+        display: inline-block;
+        width: 24%;
+    }
+
+    #caja3 {
+        display: inline-block;
+        width: 24%;
+    }
+
+    #caja4 {
+        display: inline-block;
+        width: 24%;
+    }*/
+    .caja{
+        margin: 1%;
+    }
+    body {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+    }
+
+    body, html {
+        width: 100%;
+        height: 100%;
+    }
