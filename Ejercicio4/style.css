@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0px auto; /* auto (margen izquierdo y derecho): La palabra clave auto le dice al navegador que ajuste automáticamente los márgenes izquierdo y derecho para que el elemento quede centrado horizontalmente dentro de su contenedor. */
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    background-color: rgb(177, 174, 174);
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+}
+
+#verde {
+    display: inline-block;
+    padding: 5%;
+    margin: 0% 2% 0% 2%;
+    background-color: green;
+    width: 96%;
+    height: 20%;
+}
+#Padreazul {
+    display: inline-block;
+    margin: 2% 2% 2% 2%;
+    background-color: white;
+    width: 20%;
+    height: 60%;
+    vertical-align: top;
+}
+#azul1 {
+    display: inline-block;
+    margin: 2% 0% 0% 0%;
+    background-color: blue;
+    width: 100%;
+    height: 70%;
+    vertical-align: top;
+    
+}
+
+#azul2 {
+    display: block;
+    margin: 2% 0% 0% 0%;
+    background-color: blue;
+    width: 100%;
+    height: 30%;
+    
+}
+
+#rojo {
+    display: inline-block;
+    margin: 2% 2% 2% 0%;
+    background-color: red;
+    width: 73.5%;
+    height: 70%;
+}
+
+.amarillo {
+    display: inline-block;
+    margin: 2%;
+    background-color: yellow;
+    width: 28.7%;
+    height: 50%;
+}
+
+#morado {
+    display: block;
+    margin: 0% 2% 2% 2%;
+    background-color: blueviolet;
+    width: 96%;
+    height: 35%;
+}
