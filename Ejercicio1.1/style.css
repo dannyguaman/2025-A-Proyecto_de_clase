@@ -1,0 +1,29 @@
+div {
+    background-color: #CCC
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*inline-block permite asignarle un tamaño especifico a los elementos div*/
+#caja1 {
+    display: inline-block;
+    width: 24%;
+}
+
+#caja2 {
+    display: inline-block;
+    width: 24%;
+}
+
+#caja3 {
+    display: inline-block;
+    width: 24%;
+}
+
+#caja4 {
+    display: inline-block;
+    width: 24%;
+}
