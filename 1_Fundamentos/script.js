@@ -24,12 +24,18 @@ function renderRestaurantes(lista) {
     const horario = document.createElement('p');
     horario.textContent = `Horario: ${restaurante.horario}`;
 
+    //Añadir reputacion
     const reputacion = document.createElement('P');
     reputacion.textContent = `Reputacion: ${restaurante.reputacion}`;
+
+     
+
+
     
     restaurantDiv.appendChild(nombre);// se coloca dentro de div y se tiene la estructura 
     restaurantDiv.appendChild(tipo);
     restaurantDiv.appendChild(horario);
+    restaurantDiv.appendChild(reputacion); // Añadir reputación al div del restaurante
     
     container.appendChild(restaurantDiv); // se actualiza el DOM
   });
