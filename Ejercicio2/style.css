@@ -17,6 +17,7 @@ que queda entre el contenedor y el borde de la ventana.
 #divBuscar {
     width: 400px;
     height: 100px;
+    background-color: aquamarine;
     
 }
 #btnBuscar {
@@ -81,7 +82,7 @@ que queda entre el contenedor y el borde de la ventana.
 
 #btnSubmit {
     width: 20%;
-    height: 100%;
+    height: 50%;
     margin-top: 20px;
     background-color: blue;
     color: white;
@@ -96,3 +97,8 @@ que queda entre el contenedor y el borde de la ventana.
     border: 3px solid grey;
 }
 
+/*display: inline abarca el espacio necesario para tener el elemento */
+
+div {
+    display: inline;
+}
