@@ -1,5 +1,13 @@
+*{
+    margin: 1;
+    padding: 0;
+}
+body{
+    width: 100%;
+}
 div {
     background-color: #CCC;
+    display: flex;
 }
 
 #caja1 {
@@ -15,5 +23,7 @@ div {
 }
 
 #caja4 {
-    display: none;
+    display: inline-block;
+    Width: 24%;
+    flex: 1;
 }
