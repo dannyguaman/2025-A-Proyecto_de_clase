@@ -1,31 +1,36 @@
-html, body {
+*, html, body {
+    margin: 0;
+    padding: 0;
     width: 100%;
+    height: 100%;
     background-color: lightblue;
 }
-div {
-    background-color: gray;
+.container {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding: 0;
+
+    background-color: white;
     color: white;
-    width: 24.5%;
-    min-width: 20px;
-    
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: start;
+}
+div{
+    background-color: lightseagreen;
 }
 
-#caja1 {
-    display: inline-block;
-    
-}
-
-#caja2 {
-    display: inline-block;
-
-}
-
-#caja3 {
-    display: inline-block;
+.caja{
+    width: 25%;
+    height: auto;
+    margin: 10px;
+    background-color: lightcoral;
+    cursor: pointer;
+    flex: 1;
 
 }
-
-#caja4 {
-    display: inline-block;
-
+#uno{
+    flex:6;
 }
