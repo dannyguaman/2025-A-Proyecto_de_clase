@@ -1,0 +1,19 @@
+div {
+    background-color: #CCC;
+}
+
+#caja1 {
+    display: block;
+}
+
+#caja2 {
+    display: inline;
+}
+
+#caja3 {
+    display: inline;
+}
+
+#caja4 {
+    display: none;
+}
