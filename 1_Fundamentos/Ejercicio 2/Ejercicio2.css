@@ -59,3 +59,11 @@
     width: 20%;
     height: 10%;
 }
+body,html{
+    height: 100%;
+    
+}
+div{
+    background-color: lightblue;
+    display: inline;
+}

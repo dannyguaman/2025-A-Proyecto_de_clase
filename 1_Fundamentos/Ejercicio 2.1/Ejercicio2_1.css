@@ -1,0 +1,31 @@
+html, body {
+    width: 100%;
+    background-color: lightblue;
+}
+div {
+    background-color: gray;
+    color: white;
+    width: 24.5%;
+    min-width: 20px;
+    
+}
+
+#caja1 {
+    display: inline-block;
+    
+}
+
+#caja2 {
+    display: inline-block;
+
+}
+
+#caja3 {
+    display: inline-block;
+
+}
+
+#caja4 {
+    display: inline-block;
+
+}
