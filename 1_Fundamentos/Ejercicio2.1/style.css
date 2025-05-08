@@ -1,8 +1,21 @@
 #caja1 {
-    display: block;
+    display:inline-block;
 }
 
 #caja2{
-    display: inline;
+    display: inline-block;
  
+}
+
+#caja3{
+    display: inline-block;
+ 
+}
+
+#caja4{
+    display: inline-block;
+ 
+}
+div{
+    width: 25%;
 }
