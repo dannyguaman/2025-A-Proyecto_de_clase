@@ -31,6 +31,7 @@ function renderRestaurantes(lista) {
     restaurantDiv.appendChild(nombre); //se coloca el nombre dentro del div y se consigue la esctrucutra
     restaurantDiv.appendChild(tipo);
     restaurantDiv.appendChild(horario);
+    restaurantDiv.appendChild(reputacion); //se coloca la reputacion dentro del div y se consigue la esctrucutra
     
     container.appendChild(restaurantDiv); //se coloca el div dentro del contenedor y se actualiza el DOM
   });
@@ -72,3 +73,5 @@ function changeImage() {
   const imageElement = document.getElementById('main-image');
   imageElement.src = "./img/nuevo_plato.jpg"; // Cambiar la imagen al hacer clic
 }
+
+
