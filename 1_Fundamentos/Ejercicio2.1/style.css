@@ -1,26 +1,28 @@
-#caja1 {
-    display:inline-block;
-}
 
-#caja2{
-    display: inline-block;
- 
-}
-
-#caja3{
-    display: inline-block;
- 
-}
-
-#caja4{
-    display: inline-block;
- 
-}
-div{
-    width: 24%;
-}
 
 *{
     margin: 0;
     padding: 0;
+}
+
+body,html{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end; 
+    margin: 1%;
+  
+}
+
+.caja{
+    background-color: blue;
+    width: 100%;
+    height: 50%;
+    padding: 1%;
+   
+    border-radius: 10px;
+    align-items: flex-end; 
+
+
 }
