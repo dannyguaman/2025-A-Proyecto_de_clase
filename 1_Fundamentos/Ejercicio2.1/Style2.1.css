@@ -1,0 +1,52 @@
+/* Ejercicio 2.1 */
+
+
+div{
+
+    background-color: #CCC;
+    width: 24%;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+body,html{
+    height: 100%;
+    width: 100%;    
+}
+
+    body{
+        display: flex;
+        flex-direction: row;
+        margin: 2%;
+        align-content: center;
+        justify-content: center;
+        align-items: flex-end;
+        background-color: bisque ;
+
+    }
+    #caja1 {
+        display: inline-block;
+        
+    }
+    
+    #caja2 {
+        display: inline-block;
+        
+    }
+    
+    #caja3 {
+        display: inline-block;
+       
+        
+    }
+    
+    #caja4 {
+        display: inline-block;
+        
+    }
+        
+
+
