@@ -1,0 +1,126 @@
+/* === ESTILO GLOBAL === */
+* {
+    margin: 0px; /* Elimina todos los márgenes por defecto de los elementos */
+    box-sizing: border-box; /* Incluye padding y border dentro del tamaño total del elemento */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Usa Arial como fuente principal y sans-serif como respaldo */
+    background-color: rgb(44, 172, 231); /* Establece un color de fondo celeste */
+    height: 100vh; /* Alto del cuerpo igual a la altura de la ventana visible */
+    width: 100vw; /* Ancho del cuerpo igual al ancho de la ventana visible */
+    margin: 0; /* Elimina márgenes exteriores del body */
+    padding: 0; /* Elimina relleno interno del body */
+}
+
+.container {
+    width: 100vw; /* Ocupa todo el ancho del viewport */
+    height: 100vh; /* Ocupa todo el alto del viewport */
+    padding: auto; /* (No tiene efecto práctico aquí, se recomienda no usar 'auto' en padding) */
+}
+
+
+/* === ENCABEZADO === */
+.titulo {
+    display: flex; /* Usa modelo flexible para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente el título */
+    font-size: 35px; /* Tamaño grande de fuente */
+    font-weight: bold; /* Texto en negrita */
+    margin-top: 2%; /* Espacio superior del 2% del alto total */
+}
+
+
+/* === SECCIÓN DE BÚSQUEDA === */
+.zona1 {
+    width: 80%; /* Ancho del 80% del contenedor padre */
+    display: flex; /* Modelo flexible */
+    flex-direction: column; /* Apila los hijos en una columna */
+    justify-content: center; /* Centra verticalmente */
+    margin: 2% 10% 2% 18%; /* Márgenes: arriba 2%, derecha 10%, abajo 2%, izquierda 18% */
+}
+
+.zona1 > div {
+    display: flex; /* Modelo flexible para los elementos internos */
+    justify-content: space-around; /* Espacio uniforme entre elementos */
+    width: 80%; /* Ancho del 80% de su contenedor */
+    gap: 5px; /* Espacio de 5px entre elementos */
+}
+
+.zona1 input {
+    display: flex; /* Modelo flexible para el input */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 30px; /* Altura fija de 30px */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid black; /* Borde negro sólido de 1px */
+    padding: 5px; /* Relleno interno de 5px */
+    justify-content: center; /* Centrado horizontal (no aplica aquí, innecesario) */
+}
+
+#buscar {
+    background-color: blue; /* Fondo azul para el botón */
+    border: 1px solid black; /* Borde negro de 1px */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px; /* Relleno interno */
+    display: flex; /* Modelo flexible */
+    justify-content: center; /* Centra el texto horizontalmente */
+    text-align: center; /* Centra el texto dentro del botón */
+    width: 50%; /* Ocupa el 50% del contenedor padre */
+}
+
+
+/* === BLOQUES DE EVENTOS === */
+.bloques {
+    margin: 2% 10% 2% 10%; /* Márgenes: arriba 2%, derecha 10%, abajo 2%, izquierda 10% */
+    width: 80%; /* Ancho del 80% del contenedor padre */
+    height: 40%; /* Altura del 40% del contenedor padre */
+    display: flex; /* Modelo flexible */
+    flex-direction: row; /* Elementos dispuestos en fila */
+    justify-content: space-around; /* Espacio uniforme entre los bloques hijos */
+}
+
+
+/* === IMÁGENES DE LOS EVENTOS === */
+.imagen {
+    width: 30%; /* Ancho del 30% del contenedor */
+    height: 30%; /* Alto del 30% del contenedor */
+    display: flex; /* Modelo flexible */
+    margin: 20% 0% 0% 10%; /* Margen: arriba 20%, derecha 0%, abajo 0%, izquierda 10% */
+}
+
+img {
+    height: auto; /* Altura automática según la proporción */
+    width: 75%; /* Ancho al 75% del contenedor */
+    border-radius: 100%; /* Hace que la imagen sea circular */
+    border: 2px solid black; /* Borde negro de 2px */
+    display: flex; /* (No es necesario en <img>, puede omitirse) */
+    justify-content: center; /* (No aplica en <img>, puede omitirse) */
+    margin: 10% 5% 5% 5%; /* Margen para separar la imagen del borde del contenedor */
+}
+
+
+/* === TARJETA DE CADA EVENTO === */
+.bloquehijo {
+    background-color: yellow; /* Fondo amarillo */
+    border-radius: 15px; /* Esquinas redondeadas */
+    width: 30%; /* Ocupa el 30% del contenedor .bloques */
+    display: flex; /* Modelo flexible */
+    flex-direction: row; /* Elementos dispuestos en fila (imagen y texto) */
+}
+
+
+/* === CONTENEDOR DE TEXTO INTERNO === */
+.bloquehijo .textos {
+    position: relative; /* Necesario para posicionar el botón respecto a este bloque */
+    text-align: left; /* Alineación del texto a la izquierda */
+    padding: 5px 0; /* Relleno superior e inferior de 5px */
+    margin-left: 0px; /* Sin margen a la izquierda */
+}
+
+
+/* === NÚMERO DE ASISTENTES === */
+.bloquehijo .textos .asistentes {
+    display: inline-block; /* Se comporta como un elemento en línea pero permite usar márgenes y padding */
+}
+
+
+/* === BOTÓN*

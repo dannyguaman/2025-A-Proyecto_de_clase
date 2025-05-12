@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- Declara que el documento está escrito en HTML5 -->
+<html lang="es">
+<!-- Indica que el contenido de la página está en español -->
+<head>
+  <meta charset="UTF-8">
+  <!-- Define la codificación de caracteres como UTF-8, útil para caracteres especiales en español -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Hace que el diseño sea responsive, adaptándose al ancho del dispositivo -->
+  <title>Ranking de Sitios Turísticos</title>
+  <!-- Título que aparece en la pestaña del navegador -->
+  <link rel="stylesheet" href="Style.css">
+  <!-- Enlaza una hoja de estilos CSS externa llamada "Style.css" -->
+</head>
+
+<body>
+  <!-- Comienza el contenido visible de la página -->
+  <h1>Ranking de sitios turísticos</h1>
+  <!-- Encabezado principal de la página -->
+  <div class="contenedor">
+  <!-- Contenedor principal que agrupa todas las secciones -->
+    <!-- === TARJETA 1 === -->
+    <div class="tarjeta">
+      <!-- Contenedor de una tarjeta turística -->
+
+      <div class="imagen-circular">
+        <!-- Contenedor que da estilo circular a la imagen -->
+        <img src="imagenes/panecillo.jpeg" alt="Panecillo">
+        <!-- Imagen del Panecillo con texto alternativo -->
+      </div>
+
+      <div class="info">
+        <!-- Contenedor de la información de la tarjeta -->
+
+        <div class="titulo-likes">
+          <!-- Sección que agrupa el título y los likes -->
+          <h2>El Panecillo</h2>
+          <!-- Nombre del sitio turístico -->
+          <span>1000 Likes</span>
+          <!-- Número de likes -->
+        </div>
+
+        <p><strong>Quito, Ecuador</strong></p>
+        <!-- Ciudad donde se encuentra el sitio turístico -->
+
+        <p>
+          <small>
+            <u>El Panecillo</u> es una elevación natural de 3.000 metros sobre el nivel del mar,
+            (200 metros más alta que el promedio de la ciudad de Quito).
+          </small>
+        </p>
+        <!-- Descripción del sitio en texto pequeño y subrayado -->
+
+        <button>Like</button>
+        <!-- Botón para dar "Like" -->
+      </div>
+    </div>
+
+    <!-- === TARJETA 2 === -->
+    <div class="tarjeta">
+      <div class="imagen-circular">
+        <img src="imagenes/mitadmundo.jpg" alt="Mitad del Mundo">
+        <!-- Imagen de la Mitad del Mundo -->
+      </div>
+
+      <div class="info">
+        <div class="titulo-likes">
+          <h2>La Mitad del Mundo</h2>
+          <span>980 Likes</span>
+          <!-- Título y número de likes -->
+        </div>
+
+        <p><strong>Quito, Ecuador</strong></p>
+        <!-- Ubicación del sitio -->
+
+        <p>
+          <small>
+            <u>La Ciudad Mitad del Mundo</u> es un complejo turístico y cultural propiedad de
+            la prefectura de la provincia de Pichincha. Está situado en la parroquia.
+          </small>
+        </p>
+        <!-- Descripción del sitio -->
+
+        <button>Like</button>
+        <!-- Botón para dar like -->
+      </div>
+    </div>
+
+    <!-- === SECCIÓN DE DESTINOS === -->
+    <div class="destinos">
+      <!-- Contenedor de tres destinos destacados -->
+
+      <div class="destino">
+        <!-- Primer destino destacado -->
+        <p><strong>Destino preferido</strong>x</p>
+        <!-- Título del destino -->
+        <div class="imagen-circular">
+          <img src="imagenes/panecillo.jpeg" alt="Preferido">
+          <!-- Imagen del destino preferido -->
+        </div>
+      </div>
+
+      <div class="destino">
+        <!-- Segundo destino destacado -->
+        <p><strong>Tu destino más cercano:</strong></p>
+        <div class="imagen-circular">
+          <img src="imagenes/mitadmundo.jpg" alt="Cercano">
+        </div>
+      </div>
+
+      <div class="destino">
+        <!-- Tercer destino destacado -->
+        <p><strong>Destino más económico:</strong></p>
+        <div class="imagen-circular">
+          <img src="imagenes/panecillo.jpeg" alt="Económico">
+        </div>
+      </div>
+    </div>
+
+    <!-- === FORMULARIO === -->
+    <div class="formulario">
+      <!-- Sección para enviar información de viaje -->
+      <p>¡Quiero viajar a este sitio!</p>
+
+      <form>
+        <!-- Formulario para seleccionar sitio y fechas -->
+
+        <label for="sitio">Sitio turístico:</label>
+        <!-- Etiqueta para el select -->
+        <select id="sitio" name="sitio">
+          <!-- Lista desplegable de sitios -->
+          <option value="panecillo">El Panecillo</option>
+          <option value="mitaddelmundo">Mitad del Mundo</option>
+        </select>
+
+        <label for="fecha-inicial">Fecha inicial:</label>
+        <!-- Etiqueta para fecha de inicio -->
+        <input type="date" id="fecha-inicial" name="fecha-inicial">
+        <!-- Selector de fecha inicial -->
+
+        <label for="fecha-final">Fecha final:</label>
+        <!-- Etiqueta para fecha de fin -->
+        <input type="date" id="fecha-final" name="fecha-final">
+        <!-- Selector de fecha final -->
+
+        <button type="submit">Enviar</button>
+        <!-- Botón para enviar el formulario -->
+      </form>
+    </div>
+
+  </div> <!-- Fin del contenedor principal -->
+
+</body>
+</html>

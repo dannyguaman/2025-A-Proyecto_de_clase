@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!-- Indica que el documento está escrito en HTML5 -->
+<html lang="en">
+<!-- Define el idioma del contenido como inglés -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define la codificación de caracteres como UTF-8 para soportar caracteres especiales -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Asegura que el diseño se adapte correctamente a dispositivos móviles -->
+
+    <link rel="stylesheet" href="Styles.css">
+    <!-- Enlaza el archivo CSS externo que define los estilos del sitio -->
+
+    <title>Eventos en "San José" por el feriado de noviembre</title>
+    <!-- Título que aparecerá en la pestaña del navegador -->
+</head>
+
+<body>
+    <div class="container">
+        <!-- Contenedor principal de todo el contenido visible -->
+
+        <div>
+            <!-- Contenedor del encabezado -->
+            <h1 class="titulo">Eventos en "San José" por el feriado de noviembre</h1>
+            <!-- Título principal de la página -->
+        </div>
+
+        <div class="zona1">
+            <!-- Sección con el campo de búsqueda -->
+
+            <div>
+                <input type="text" name="name" required>
+                <!-- Campo de texto para ingresar búsquedas -->
+
+                <br></br>
+                <!-- Salto de línea visual (no recomendado usar <br> así, mejor con CSS) -->
+
+                <button type="submit" id="buscar">Buscar</button>
+                <!-- Botón para realizar la acción de búsqueda -->
+            </div>
+        </div>
+
+        <div class="bloques">
+            <!-- Primera fila de eventos -->
+            
+            <div class="bloquehijo bloque1">
+                <!-- Primer evento -->
+
+                <div class="imagen imagen1">
+                    <!-- Contenedor de imagen -->
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTReU-8pGc6IK21fjakAARW-oik-koKW537wQ&s" alt="">
+                    <!-- Imagen representativa del evento -->
+                </div>
+
+                <div class="textos2">
+                    <!-- Contenedor de texto del evento -->
+                    <h2>Trail en el mirador de la Perdiz</h2>
+                    <!-- Nombre del evento -->
+                    <p>Mirador de la Perdiz</p>
+                    <!-- Lugar del evento -->
+                    <p>31/10/2024</p>
+                    <!-- Fecha del evento -->
+
+                    <div class="textos">
+                        <!-- Asistentes y botón de acción -->
+                        <p class="asistentes">30 asistentes</p>
+                        <button class="btnAsistir">Asistiré</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bloquehijo bloque2">
+                <!-- Segundo evento -->
+                <div class="imagen imagen2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTReU-8pGc6IK21fjakAARW-oik-koKW537wQ&s" alt="">
+                </div>
+                <div class="textos2">
+                    <h2>Concurso de la "Mejor colada morada"</h2>
+                    <p>Estadio de San José</p>
+                    <p>31/10/2024</p>
+                    <div class="textos">
+                        <p class="asistentes">100 asistentes</p>
+                        <button class="btnAsistir">Asistiré</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bloques">
+            <!-- Segunda fila de eventos -->
+
+            <div class="bloquehijo bloque3">
+                <!-- Tercer evento -->
+                <div class="imagen imagen3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTReU-8pGc6IK21fjakAARW-oik-koKW537wQ&s" alt="">
+                </div>
+                <div class="textos2">
+                    <h2>Conmemoración Día de los Difuntos</h2>
+                    <p>Cementerio de San José</p>
+                    <p>02/11/2024</p>
+                    <div class="textos">
+                        <p class="asistentes">30 asistentes</p>
+                        <button class="btnAsistir">Asistiré</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bloquehijo bloque4">
+                <!-- Cuarto evento -->
+                <div class="imagen imagen4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTReU-8pGc6IK21fjakAARW-oik-koKW537wQ&s" alt="">
+                </div>
+                <div class="textos2">
+                    <h2>Concurso de Guaguas de pan</h2>
+                    <p>Estadio de San José</p>
+                    <p>03/11/2024</p>
+                    <div class="textos">
+                        <p class="asistentes">100 asistentes</p>
+                        <button class="btnAsistir">Asistiré</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="events-container"></div>
+        <!-- Contenedor vacío que puede usarse dinámicamente con JavaScript -->
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Enlace al archivo JavaScript que puede contener interactividad para los eventos -->
+</body>
+
+</html>

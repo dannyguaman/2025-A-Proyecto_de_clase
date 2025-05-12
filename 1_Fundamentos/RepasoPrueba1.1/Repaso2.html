@@ -1,0 +1,100 @@
+<!-- Declaración del tipo de documento -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Codificación de caracteres en UTF-8 -->
+  <meta charset="UTF-8">
+  
+  <!-- Título que aparecerá en la pestaña del navegador -->
+  <title>Ranking de Sitios Turísticos</title>
+  
+  <!-- Enlace al archivo de estilos externo -->
+  <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+  <!-- Contenedor principal de toda la página -->
+  <div class="contenedor">
+    
+    <!-- Título principal de la interfaz -->
+    <h1>Ranking de sitios turísticos</h1>
+
+    <!-- Primer destino turístico: El Panecillo -->
+    <div class="tarjeta">
+      <!-- Imagen del sitio turístico -->
+      <img src="img/panecillo.png" alt="Panecillo">
+      
+      <!-- Contenedor de la información del sitio -->
+      <div class="info">
+        <!-- Título del sitio + número de likes alineado a la derecha -->
+        <h2>El Panecillo <span>1000 Likes</span></h2>
+        
+        <!-- Ciudad y país -->
+        <p><strong>Quito, Ecuador</strong></p>
+        
+        <!-- Descripción con subrayado -->
+        <p><small><u>El Panecillo</u> es una elevación natural de 3.000 metros sobre el nivel del mar, (200 metros más alta que el promedio de la ciudad de Quito).</small></p>
+        
+        <!-- Botón para dar Like -->
+        <button>Like</button>
+      </div>
+    </div>
+
+    <!-- Segundo destino turístico: Mitad del Mundo -->
+    <div class="tarjeta">
+      <img src="img/mitalmundo.png" alt="Mitad del Mundo">
+      <div class="info">
+        <h2>Mitad del Mundo <span>980 Likes</span></h2>
+        <p><strong>Quito, Ecuador</strong></p>
+        <p><small><u>La Ciudad Mitad del Mundo</u> es un complejo turístico y cultural propiedad de la prefectura de la provincia de Pichincha. Está situado en el parroquia.</small></p>
+        <button>Like</button>
+      </div>
+    </div>
+
+    <!-- Sección de resumen de destinos recomendados -->
+    <div class="destinos">
+      <!-- Destino preferido -->
+      <div class="destino">
+        <p>Destino preferido:</p>
+        <img src="img/panecillo.png" alt="preferido">
+      </div>
+
+      <!-- Destino más cercano -->
+      <div class="destino">
+        <p>Tu destino más cercano:</p>
+        <img src="img/mitalmundo.png" alt="cercano">
+      </div>
+
+      <!-- Destino más económico -->
+      <div class="destino">
+        <p>Destino más económico:</p>
+        <img src="img/panecillo.png" alt="económico">
+      </div>
+    </div>
+
+    <!-- Sección del formulario para elegir destino turístico -->
+    <div class="formulario">
+      <!-- Texto que introduce el formulario -->
+      <p>¡Quiero viajar a este sitio!</p>
+      
+      <!-- Formulario en sí -->
+      <form>
+        <!-- Campo para escribir el nombre del sitio turístico -->
+        <label>Sitio turístico:</label>
+        <input type="text">
+        
+        <!-- Campo para seleccionar fecha de inicio -->
+        <label>Fecha inicial:</label>
+        <input type="date">
+
+        <!-- Campo para seleccionar fecha final -->
+        <label>Fecha final:</label>
+        <input type="date">
+
+        <!-- Botón para enviar el formulario -->
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
+  </div>
+</body>
+</html>
