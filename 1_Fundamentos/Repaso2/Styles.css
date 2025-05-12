@@ -105,15 +105,19 @@ img {
     width: 30%; /* Ocupa el 30% del contenedor .bloques */
     display: flex; /* Modelo flexible */
     flex-direction: row; /* Elementos dispuestos en fila (imagen y texto) */
+    align-items: center;
+    text-align: center;
+    
 }
 
 
 /* === CONTENEDOR DE TEXTO INTERNO === */
 .bloquehijo .textos {
     position: relative; /* Necesario para posicionar el botón respecto a este bloque */
-    text-align: left; /* Alineación del texto a la izquierda */
+    text-align: center; /* Alineación del texto a la izquierda */
     padding: 5px 0; /* Relleno superior e inferior de 5px */
     margin-left: 0px; /* Sin margen a la izquierda */
+    
 }
 
 
@@ -122,5 +126,38 @@ img {
     display: inline-block; /* Se comporta como un elemento en línea pero permite usar márgenes y padding */
 }
 
+.tabla-eventos {
+    width: 100%; /* Ancho completo del contenedor padre */
+    height: 25%; /* Alto completo del contenedor padre */
+    display: flex; /* Modelo flexible */
+    flex-direction: column; /* Elementos dispuestos en columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    margin: 0; /* Sin márgenes */
+}
+/* === ESTILO PARA LA TABLA === */
+.tabla {
+    width: 80%; /* Ocupa el 80% del contenedor padre */
+    margin: 2% auto; /* Centra la tabla horizontalmente y agrega margen vertical */
+    border-collapse: collapse; /* Combina bordes de celdas adyacentes */
+    background-color: white; /* Fondo blanco para la tabla */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    display: table; /* Asegura que la tabla se comporte como una tabla */
+}
+
+
+.tabla th {
+    background-color: rgb(44, 172, 231); /* Fondo celeste para los encabezados */
+    color: white; /* Texto blanco */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.tabla tr:nth-child(even) {
+    background-color: #f2f2f2; /* Fondo gris claro para filas pares */
+}
+
+.tabla tr:hover {
+    background-color: #ddd; /* Fondo gris más oscuro al pasar el cursor */
+}
 
 /* === BOTÓN*
