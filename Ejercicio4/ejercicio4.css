@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    margin: 0px auto;
+}
+
+html, body {
+    width: 100%; /* 100% del ancho de la pantalla */
+    height: 100%; /* 100% de la altura de la pantalla */
+}
+
+#main {
+    background-color: rgb(177, 174, 174);
+    width: 100%; /* 100% del ancho de la pantalla */
+    height: 100%; /* 100% de la altura de la pantalla */
+    padding: 2%; /* Espacio interno de 2% */
+}
+
+#verde {
+    display: inline-block; /* Cambiado a inline-block para que se ajuste al contenido */
+    padding: 5%; /* Espacio interno de 5% */
+    margin: 0% 2% 0% 2%; /* Margen de 2% a los lados */
+    background-color: green; /* Color de fondo verde */
+    width: 96%; /* 96% del ancho del contenedor padre */
+    height: 20%; /* 20% de la altura del contenedor padre */
+}
+
+
+
+#contAzul {
+    display: inline-block; /* Cambiado a inline-block para que se ajuste al contenido */
+    margin: 2%;
+    background-color: rgb(177, 174, 174);
+    width: 20%; /* 20% del ancho del contenedor padre */
+    height: 60%; /* 60% de la altura del contenedor padre */
+    vertical-align: top; /* Alineación vertical al principio */
+    
+}
+
+.azul {
+    margin: 2%;
+    background-color: blue; 
+    width: 80%;
+    height: 50%; 
+}
+
+#rojo {
+    display: inline-block;
+    margin: 2% 2% 2% 0%;
+    background-color: red;
+    width: 73.5%;
+    height: 70%;
+}
+
+.amarillo {
+    display: inline-block;
+    margin: 2%;
+    background-color: yellow;
+    width: 28.7%;
+    height: 50%;
+}
+
+#morado {
+    display: block;
+    margin: 0% 2% 2% 2%;
+    background-color: blueviolet;
+    width: 96%;
+    height: 35%;
+}

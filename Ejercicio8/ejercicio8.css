@@ -1,0 +1,29 @@
+* {
+    color: white;
+    font-family: sans-serif;
+    font-size: 16pt;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col, .col-2, .col-3 {
+    background-color: rgb(12, 98, 155);
+    height: 70px;
+    flex: 1;
+    margin: 1%;
+    border: 0px;
+    padding-left: 2%;
+    padding-top: 2%;
+}
+
+.col-2 {
+    flex: 2;
+}
+
+.col-3 {
+    flex: 3;
+}

@@ -1,0 +1,26 @@
+div {
+    background-color: #CCC;
+    width: 24%;
+}
+    
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+body {
+    display: flex;  
+    flex-direction: row;
+    align-items: start;
+}
+
+.caja{
+    margin: 1%;
+}
+
+body, html {
+    width: 100%;    
+    height: 100%;
+    
+}
