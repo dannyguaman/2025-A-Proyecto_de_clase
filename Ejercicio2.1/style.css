@@ -1,0 +1,25 @@
+div {
+    background-color: #CCC;
+}
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.caja {
+    margin: 1px;
+    display: inline-block;
+    width: 10%
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}

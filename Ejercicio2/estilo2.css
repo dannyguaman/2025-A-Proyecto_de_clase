@@ -64,3 +64,7 @@
 #PadreSubmit {
     height: 100px;
 }
+
+div {
+    display: inline;
+}
