@@ -1,16 +1,122 @@
-*{
+/* Ajuste general de márgenes y paddings */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-#main{
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para el encabezado */
+#Encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0A036C;
+    color: white;
+    padding: 20px;
+}
+
+#logo img {
+    height: 50px; /* Ajusta el tamaño del logo */
+}
+
+#titulo p {
+    font-size: 18px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+/* Pie de página */
+#piePagina {
     display: flex;
     flex-direction: column;
+    background-color: #94BBF7;
 }
 
-#Titulo{
+#contenido {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
 }
 
+/* Dirección, Contactos y Copyright */
+#Direccion p,
+#Contactos p,
+#Copyright p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+#Direccion p:first-child,
+#Contactos p:first-child {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#Direccion, #Contactos, #Copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#Copyright {
+    background-color: #0A036C;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #003366;
+    font-weight: bold;
+}
+
+/* Ajustes para las redes sociales */
+.redesSociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho disponible */
+}
+
+.redes {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    width: 50px; /* Ajusta el tamaño de los iconos */
+    height: 50px; /* Ajusta el tamaño de los iconos */
+}
+
+.redes img {
+    width: 100%;  /* Hace que las imágenes se ajusten dentro del contenedor */
+    height: 100%; /* Mantiene la proporción adecuada */
+    
+    object-fit: contain; /* Asegura que la imagen no se deforme */
+}
+
+/* Métodos de pago */
+.MetodosDePago {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.metodo img {
+    width: 50px; /* Ajusta el tamaño de la imagen del método de pago */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+
+.bloqueIconos {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px; /* Espacio entre los iconos */
+
+}

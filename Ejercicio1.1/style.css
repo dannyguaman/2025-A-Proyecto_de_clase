@@ -7,8 +7,10 @@ div {
     padding: 0;
 }
 
+/*------------ centrar de caja en caja -------------*/
+
 /*inline-block permite asignarle un tamaño especifico a los elementos div*/
-#caja1 {
+/*#caja1 {
     display: inline-block;
     width: 24%;
 }
@@ -26,4 +28,22 @@ div {
 #caja4 {
     display: inline-block;
     width: 24%;
+}*/
+
+
+/*------------- USO DE DISPLAY: FLEX -------------*/
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.caja {
+    margin: 1%;
 }
