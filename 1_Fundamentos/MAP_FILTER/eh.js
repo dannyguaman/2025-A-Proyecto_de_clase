@@ -1,12 +1,12 @@
 var restaurante ={nombre: 'Restaurante San Jose' ,tipo: 'tradicional'}
 undefined
     console.log(restaurante)
-VM814:1 {nombre: 'Restaurante San Jose', tipo: 'tradicional'}
+
 undefined
 var restaurante ={nombre: 'Restaurante San Jose' ,tipo: 'tradicional',horario:'08:00-20:00'}
 undefined
 console.log(restaurante.horario)
-VM924:1 08:00-20:00
+
 undefined
 restaurante["horario"]
 '08:00-20:00'
@@ -25,10 +25,8 @@ undefined
 console.log(a)
 VM1320:1 (5) [1, 2, 3, 4, 5]
 undefined
-zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
-VM1374:1 Uncaught ReferenceError: zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz is not defined
-    at <anonymous>:1:1
-(anonymous) @ VM1374:1Understand this error
+
+
 var edades =a.map(function(x) { return x*x; })
 undefined
 console.log(edades)
@@ -41,16 +39,16 @@ VM1528:1 (5) [-3, -2, -1, 0, 1]
 undefined
 edades = a.filter(function(x) { return x<=2})
     
-}(x){return x<4}
-VM1748:3 Uncaught SyntaxError: Unexpected token '}'Understand this error
+
+
 edades = a.filter(function(x) { return x<=2})
     
 
 (2) [1, 2]
 edades = edades.map(function(x) {return 2-4})
     
-}
-VM1880:3 Uncaught SyntaxError: Unexpected token '}'Understand this error
+
+
 edades = edades.map(function(x) {return 2-4})
     
 
