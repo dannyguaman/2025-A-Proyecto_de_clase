@@ -6,4 +6,3 @@ var edadesMapeadas = edades.map(function(edad){
 }
 );
 console.log(edadesMapeadas);
-
