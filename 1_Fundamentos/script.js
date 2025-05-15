@@ -30,7 +30,7 @@ function renderRestaurantes(lista) {
     let estrellas = '';
     for (let i = 0; i < restaurante.reputacion; i++) {
     
-      estrellas += "⭐"; // Agregar estrellas de reputación
+      estrellas += "🚗"; // Agregar estrellas de reputación
     }
     reputacion.textContent = `Reputación: ${estrellas}`;
 
@@ -46,6 +46,34 @@ function renderRestaurantes(lista) {
 
 // Renderiza la lista completa de restaurantes al cargar la página
 renderRestaurantes(restaurantes);
+
+function handleAgregar(event) {
+  event.preventDefault();
+  const nombre = document.getElementById('restaurant-name').value;
+  const tipo = document.getElementById('Tipo').value;
+  const horario = document.getElementById('Horario').value;
+  const reputacion = parseInt(document.getElementById('Reputacion').value);
+  if (nombre && tipo && horario && reputacion) {
+    document.getElementById('restaurant-name').value = '';
+    document.getElementById('Tipo').value = '';
+    document.getElementById('Horario').value = '';
+    document.getElementById('Reputacion').value = '';
+    
+    const nuevoRestaurante = {
+      nombre: nombre,
+      tipo: tipo,
+      horario: horario,
+      reputacion: reputacion
+    };
+    restaurantes.push(nuevoRestaurante);
+    renderRestaurantes(restaurantes);
+    //Mensaje de éxito
+    alert("Restaurante agregado exitosamente.");
+    document.getElementById('restaurant-form').reset(); // Limpiar el formulario
+  } else {
+    alert("Por favor, complete todos los campos.");
+  }
+}
 
 // Función que se ejecuta al enviar el formulario
 function handleSubmit(event) {
