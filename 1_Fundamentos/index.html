@@ -28,13 +28,25 @@
     </div>
   </section>
 
+  <section id="AgregaRestaurante">
+    <h2>Agrega un nuevo restaurante</h2>
+    <form id="add-restaurant-form">
+      <input type="text" id="restaurant-name" placeholder="Nombre del restaurante" required>
+      <input type="text" id="cuisine-type" placeholder="Tipo de comida" required>
+      <input type="text" id="opening-hours" placeholder="Horario de atención" required>
+      <input type="text" id="reputation" placeholder="Reputacion" required>
+      <button type="submit" onclick="handleAddRestaurant(event);">Agregar Restaurante</button>
+    </form>
+  </section>
+
   <!-- Sección de búsqueda de restaurantes -->
   <section id="search">
     <div class="search-form">
       <h3>Busca tu restaurante favorito</h3>
       <form id="restaurant-search-form" onsubmit="handleSubmit(event);">
         <input type="text" name="restaurant-name" placeholder="Nombre del restaurante" required>
-        <button type="submit">Buscar</button>
+        
+        <button type="submit">Buscar</button>   <!-- Este boton permite enviar la informacion del formulario a un servidor -->
       </form>
       <p id="search-result"></p> <!-- Muesta el resultado aquí -->
     </div>
