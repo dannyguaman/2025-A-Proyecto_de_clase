@@ -11,8 +11,10 @@ header {
   padding: 10px;
   text-align: center;
 }
-
-nav ul {
+/* Un espacio representa una relacion ancestro descendiente */
+/* > de padre a hijo*/
+/* : hipervinculo */
+nav ul { 
   list-style: none;
   padding: 0;
   display: flex;
