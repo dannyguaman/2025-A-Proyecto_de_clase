@@ -53,11 +53,11 @@ function handleSubmit(event) {
     renderRestaurantes(restaurantes); // Muestra la lista completa si el campo está vacío
   } else {
     const resultados = restaurantes.filter(restaurante => 
-      restaurante.nombre.toLowerCase().includes(input)
+      restaurante.nombre.toLowerCase().includes(input) || restaurante.tipo.toLowerCase().includes(input) 
     );
 
-    if (resultados.length > 0) {
-      resultElement.textContent = `Mostrando resultados para: "${input}"`;
+    if (resultados.length > 0 ) {
+      resultElement.textContent = `Mostrando resultados para: "${input}" `;
       resultElement.style.color = "green";
       renderRestaurantes(resultados);
     } else {
@@ -66,6 +66,24 @@ function handleSubmit(event) {
       renderRestaurantes([]); // Limpia la lista si no hay coincidencias
     }
   }
+}
+
+// Función para agregar un nuevo restaurante
+function handleInsertar(event) {
+  event.preventDefault(); // Previene el comportamiento por defecto del formulario
+  const nombre = document.getElementById('name').value;
+  const tipo = document.getElementById('tipo').value; //se obtiene el valor del input tipo
+  const horario = document.getElementById('horario').value; //se obtiene el valor del input horario
+  const reputacion = document.getElementById('reputacion').value; //se obtiene el valor del input reputacion
+  const nuevoRestaurante = { //se crea un objeto con los datos del nuevo restaurant
+    nombre: nombre,
+    tipo: tipo,
+    horario: horario,
+    reputacion: reputacion
+    };
+  restaurantes.push(nuevoRestaurante); //se añade el nuevo restaurante al array de restaurantes
+  renderRestaurantes(restaurantes); //se renderiza la lista de restaurantes
+
 }
 
 // Función que cambia la imagen al hacer clic
