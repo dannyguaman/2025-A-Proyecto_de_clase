@@ -56,7 +56,7 @@ function handleSubmit(event) {
     renderRestaurantes(restaurantes); // Muestra la lista completa si el campo está vacío
   } else {
     const resultados = restaurantes.filter(restaurante => 
-      restaurante.nombre.toLowerCase().includes(input)
+      restaurante.nombre.toLowerCase().includes(input) || restaurante.tipo.toLowerCase().includes(input)
     );
 
     if (resultados.length > 0) {
@@ -69,6 +69,22 @@ function handleSubmit(event) {
       renderRestaurantes([]); // Limpia la lista si no hay coincidencias
     }
   }
+}
+
+function handleInsert(event) {
+  event.preventDefault();
+  const nombre = document.querySelector('input[name="nombre-insertar"]').value;
+  const tipo = document.querySelector('input[name="tipo-insertar"]').value;
+  const horario = document.querySelector('input[name="horario-insertar"]').value;
+  const reputacion = parseInt(document.querySelector('input[name="reputacion-insertar"]').value);
+  const nuevoRestaurante = {
+    nombre: nombre,
+    tipo: tipo,
+    horario: horario,
+    reputacion: reputacion
+  };
+  restaurantes.push(nuevoRestaurante);
+  renderRestaurantes(restaurantes);
 }
 
 // Función que cambia la imagen al hacer clic
