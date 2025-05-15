@@ -28,6 +28,36 @@
     </div>
   </section>
 
+  <section>
+    <div class="add-restaurant">
+      <h3>Agregar un nuevo restaurante</h3>
+      <form id="add-restaurant-form" onsubmit="handleAddRestaurant(event);">
+        <div>
+          <label for="restaurant-nombre">Nombre del restaurante:</label>
+          <input type="text" name="restaurant-nombre" required>
+        </div>
+        <div>
+          <label for="restaurant-type">Tipo de comida:</label>
+          <input type="text" name="restaurant-type" required>
+
+        </div>
+
+        <div>
+          <label for="restaurant-hours">Horario:</label>
+          <input type="text" name="restaurant-hours" placeholder="Ej: 12:00 - 22:00" required>
+
+        </div>
+        <div>
+          <label for="restaurant-reputacion">Reputacion:</label>
+          <input type="text" name="restaurant-reputacion" required>
+        </div>
+
+        <button type="submit">Agregar Restaurante</button>
+      </form>
+      <p id="add-restaurant-message"></p>
+    </div>
+  </section>
+  
   <!-- Sección de búsqueda de restaurantes -->
   <section id="search">
     <div class="search-form">

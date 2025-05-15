@@ -45,6 +45,21 @@ function renderRestaurantes(lista) {
 // Renderiza la lista completa de restaurantes al cargar la página
 renderRestaurantes(restaurantes);
 
+function handleAddRestaurant(event) {
+  event.preventDefault(); // Previene el comportamiento por defecto del formulario
+
+  const nombre = document.querySelector('input[name="restaurant-nombre"]').value;
+  const tipo = document.querySelector('input[name="restaurant-type"]').value;
+  const horario = document.querySelector('input[name="restaurant-hours"]').value;
+  const reputacion = document.querySelector('input[name="restaurant-reputacion"]').value;
+
+    const nuevoRestaurante = { nombre: nombre, tipo: tipo, horario: horario, reputacion: reputacion };
+    restaurantes.push(nuevoRestaurante);
+    renderRestaurantes(restaurantes); // Renderiza la lista actualizada
+    alert("Restaurante agregado exitosamente.");
+}  
+
+
 // Función que se ejecuta al enviar el formulario
 function handleSubmit(event) {
   event.preventDefault(); // Previene el comportamiento por defecto del formulario
@@ -58,7 +73,8 @@ function handleSubmit(event) {
     renderRestaurantes(restaurantes); // Muestra la lista completa si el campo está vacío
   } else {
     const resultados = restaurantes.filter(restaurante => 
-      restaurante.nombre.toLowerCase().includes(input)
+      restaurante.nombre.toLowerCase().includes(input) ||
+      restaurante.tipo.toLowerCase().includes(input)
     );
 
     if (resultados.length > 0) {
