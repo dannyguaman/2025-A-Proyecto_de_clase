@@ -60,7 +60,10 @@ function handleSubmit(event) {
     renderRestaurantes(restaurantes); // Muestra la lista completa si el campo está vacío
   } else {
     const resultados = restaurantes.filter(restaurante => 
-      restaurante.nombre.toLowerCase().includes(input)
+      restaurante.nombre.toLowerCase().includes(input) 
+      || restaurante.tipo.toLowerCase().includes(input)
+      || restaurante.horario.toLowerCase().includes(input)   
+      || restaurante.reputacion.toString().includes(input)
     );
 
     if (resultados.length > 0) {
