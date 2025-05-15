@@ -28,6 +28,19 @@
     </div>
   </section>
 
+  <!--Formulario para ingresar un nuevo restaurante-->
+  <section id="add-restaurant">
+    <h3>Agrega un nuevo restaurante</h3>
+    <form id="restaurant-form" onsubmit="crearRestaurante(event);">
+      <input id="nombre" type="text" name="restaurant-name" placeholder="Nombre del restaurante" required>
+      <input id="tipo" type="text" name="cuisine-type" placeholder="Tipo de comida" required>
+      <input id="horario" type="text" name="hours" placeholder="Horario (ej. 12:00 - 22:00)" required>
+      <input id="reputacion" type="text" name="grade" placeholder="Reputacion" required>
+      <button id="agregarRestaurante" dtype="submit">Agregar Restaurante</button>
+    </form>
+    <p id="form-result"></p> <!-- Muestra el resultado aquí -->
+  </section>
+
   <!-- Sección de búsqueda de restaurantes -->
   <section id="search">
     <div class="search-form">

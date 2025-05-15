@@ -7,6 +7,27 @@ const restaurantes = [
   { nombre: "Lucho´s Pizza", tipo: "Italiana", horario: "11:00 - 22:00", reputacion: 1 },
 ]; //vector de objetos de javascript
 
+//Funcion para crear un nuevo restaurante tomando los datos del formulario
+function crearRestaurante(event) { // Maneja el evento de envío del formulario
+  event.preventDefault(); // Previene el comportamiento por defecto del formulario
+
+  const nombre = document.getElementById('nombre').value; // Obtener el valor del campo de entrada
+  const tipo = document.getElementById('tipo').value; // Obtener el valor del campo de entrada
+  const horario = document.getElementById('horario').value; // Obtener el valor del campo de entrada
+  const reputacion = parseInt(document.getElementById('reputacion').value,10); // Obtener el valor del campo de entrada
+
+  const nuevoRestaurante = { // Crear un nuevo objeto restaurante
+    nombre: nombre,
+    tipo: tipo,
+    horario: horario,
+    reputacion: reputacion,
+  };
+  restaurantes.push(nuevoRestaurante); // Añadir el nuevo restaurante al array de restaurantes 
+  
+  renderRestaurantes(restaurantes); // Renderizar la lista actualizada de restaurantes
+}
+
+
 // Función para inicializar el evento del formulario
 // Función para renderizar la lista de restaurantes
 function renderRestaurantes(lista) {
@@ -54,7 +75,7 @@ function handleSubmit(event) { // Maneja el evento de envío del formulario
     renderRestaurantes(restaurantes); // Muestra la lista completa si el campo está vacío
   } else {
     const resultados = restaurantes.filter(restaurante => // Filtra la lista de restaurantes
-      restaurante.nombre.toLowerCase().includes(input) // Verifica si el nombre del restaurante incluye el texto ingresado
+      restaurante.nombre.toLowerCase().includes(input) || restaurante.tipo.toLocaleLowerCase().includes(input)// Verifica si el nombre del restaurante incluye el texto ingresado
     );
 
     if (resultados.length > 0) {// Si hay resultados
@@ -68,9 +89,9 @@ function handleSubmit(event) { // Maneja el evento de envío del formulario
     }
   }
 }
-
 // Función que cambia la imagen al hacer clic
 function changeImage() {// Cambia la imagen al hacer clic
   const imageElement = document.getElementById('main-image');// Obtener el elemento de la imagen
   imageElement.src = "./img/nuevo_plato.jpg"; // Cambiar la imagen al hacer clic
 }
+

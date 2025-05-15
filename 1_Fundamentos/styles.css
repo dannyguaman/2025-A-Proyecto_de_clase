@@ -103,4 +103,24 @@ footer {
   font-size: 1em;
   color: #666;
 }
+
+#add-restaurant{
+  text-align: center;
+}
+
+.txt{
+  margin: 0;
+  font-size: 1.6em;
+  color: #333;
+}
+
+#agregarRestaurante{
+  padding: 15px 30px;
+  font-size: 1.2em;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
 /* Fin de código nuevo */
