@@ -45,6 +45,25 @@ function renderRestaurantes(lista) {
 // Renderiza la lista completa de restaurantes al cargar la página
 renderRestaurantes(restaurantes);
 
+function handleSubmit2(event) {  
+  event.preventDefault(); // Previene el comportamiento por defecto del formulario
+  const nombre1 = document.querySelector('input[name="restauranteName"]').value;
+  const tipo1 = document.querySelector('input[name="restauranteType"]').value;
+  const horario1 = document.querySelector('input[name="restauranteHorario"]').value;
+  const reputacion1 = document.querySelector('input[name="restauranteReputacion"]').value;
+ 
+  const nuevoRestaurante = { nombre: nombre1, tipo: tipo1, horario: horario1, reputacion: parseInt(reputacion1) };
+  restaurantes.push(nuevoRestaurante); 
+  renderRestaurantes(restaurantes); 
+  alert(`Restaurante ${nombre1} agregado con éxito!`); 
+
+  // borrar datos del formulario
+  document.querySelector('input[name="restauranteName"]').value = '';
+  document.querySelector('input[name="restauranteType"]').value = '';
+  document.querySelector('input[name="restauranteHorario"]').value = '';
+  document.querySelector('input[name="restauranteReputacion"]').value = '';
+}
+
 // Función que se ejecuta al enviar el formulario
 function handleSubmit(event) {
   event.preventDefault(); // Previene el comportamiento por defecto del formulario
@@ -57,9 +76,8 @@ function handleSubmit(event) {
     resultElement.style.color = "red";
     renderRestaurantes(restaurantes); // Muestra la lista completa si el campo está vacío
   } else {
-    const resultados = restaurantes.filter(restaurante => 
-      restaurante.nombre.toLowerCase().includes(input)
-    );
+    const resultados = restaurantes.filter(restaurante =>
+      restaurante.nombre.toLowerCase().includes(input) || restaurante.tipo.toLowerCase().includes(input));
 
     if (resultados.length > 0) {
       resultElement.textContent = `Mostrando resultados para: "${input}"`;

@@ -28,6 +28,22 @@
     </div>
   </section>
 
+    <!-- Sección de ingresar un restaurante -->
+  <section id="registro">
+    <div class="registration-form">
+      <h3>Registro de Restaurantes</h3>
+      <form id="restaurant-registro-form" onsubmit="handleSubmit2(event);">
+        <input type="text" name="restauranteName" placeholder="Nombre del restaurante" required>
+        <input type="text" name="restauranteType" placeholder="Tipo de restaurante" required>
+        <input type="text" name="restauranteHorario" placeholder="Horario de atención" required>
+        <input type="number" name="restauranteReputacion" placeholder="Reputacion del restaurante" required>
+        <button type="submit">Registrar Restaurante</button>
+      </form>
+      <p id="registration-result"></p> <!-- Muesta el resultado aquí -->
+    </div>
+  </section>
+
+
   <!-- Sección de búsqueda de restaurantes -->
   <section id="search">
     <div class="search-form">
