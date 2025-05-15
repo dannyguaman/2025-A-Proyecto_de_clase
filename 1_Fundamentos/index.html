@@ -27,7 +27,26 @@
       <img src="./img/Plato_tipico.jfif" alt="Plato típico de San José" style="height: 250px;">
     </div>
   </section>
+  <!-- Formulario para crear un nuevo restaurante -->
+  <section id="add-restaurant">
+    <h3>Agregar nuevo restaurante</h3>
+    <form id="create-restaurant-form" onsubmit="handleCreateRestaurant(event);">
+      <label for="create-restaurant-name">Nombre:</label>
+      <input type="text" id="create-restaurant-name" name="create-restaurant-form" required>
 
+      <label for="create-restaurant-type">Tipo de comida:</label>
+      <input type="text" id="create-restaurant-type" name="restaurant-type" required>
+
+      <label for="create-restaurant-hours">Horario:</label>
+      <input type="text" id="create-restaurant-hours" name="restaurant-hours" placeholder="Ej: 12:00 - 22:00" required>
+
+      <label for="create-restaurant-reputation">Reputación (1-5):</label>
+      <input type="number" id="create-restaurant-reputation" name="restaurant-reputation" min="1" max="5" required>
+
+      <button type="submit">Agregar restaurante</button>
+    </form>
+    <p id="add-restaurant-message"></p>
+  </section>
   <!-- Sección de búsqueda de restaurantes -->
   <section id="search">
     <div class="search-form">

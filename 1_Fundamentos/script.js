@@ -7,7 +7,7 @@ const restaurantes = [
   { nombre: "Sabores Zuleteños", tipo: "Tradicinal", horario: "10:00 - 18:00", reputacion: 5},
 
 ];
-
+console.log("Si");
 // Función para renderizar la lista de restaurantes
 function renderRestaurantes(lista) { 
   const container = document.getElementById('restaurants-container');// 
@@ -43,19 +43,22 @@ function renderRestaurantes(lista) {
 renderRestaurantes(restaurantes);
 
 // Función que se ejecuta al enviar el formulario
-function handleSubmit(event) {
+function handleSubmit(event) {// Se ejecuta al enviar el formulario
   event.preventDefault(); // Previene el comportamiento por defecto del formulario
 
-  const input = document.querySelector('input[name="restaurant-name"]').value.toLowerCase();
+  const input = document.querySelector('input[name="restaurant-name"]').value.toLowerCase(); // Obtiene el valor del input y lo convierte a minúsculas
   const resultElement = document.getElementById('search-result');
-
+  console.log(document.querySelector('input[name="restaurant-name"]'));
+   console.log("nombre");
   if (input.trim() === "") {
     resultElement.textContent = "Por favor, ingrese un nombre válido.";
     resultElement.style.color = "red";
     renderRestaurantes(restaurantes); // Muestra la lista completa si el campo está vacío
   } else {
-    const resultados = restaurantes.filter(restaurante => 
-      restaurante.nombre.toLowerCase().includes(input)
+    
+    const resultados = restaurantes.filter(restaurante =>
+      restaurante.nombre.toLowerCase().includes(input) || // Filtra por nombre
+      restaurante.tipo.toLowerCase().includes(input) // Filtra por tipo de comida
     );
 
     if (resultados.length > 0) {
@@ -75,3 +78,42 @@ function changeImage() {
   const imageElement = document.getElementById('main-image');
   imageElement.src = "./img/nuevo_plato.jpg"; // Cambiar la imagen al hacer clic
 }
+
+
+
+// Función para manejar la creación de un nuevo restaurante
+function handleCreateRestaurant(event) {
+  event.preventDefault();
+
+  const name = document.getElementById('create-restaurant-name').value.trim(); //
+  const type = document.getElementById('create-restaurant-type').value.trim();
+  const hours = document.getElementById('create-restaurant-hours').value.trim();
+  const reputation = parseInt(document.getElementById('create-restaurant-reputation').value, 10);
+
+  const resultElement = document.getElementById('search-result'); // Elemento para mostrar mensajes
+
+  if (!name || !type || !hours || isNaN(reputation) || reputation < 1 || reputation > 5) {
+    resultElement.textContent = "Por favor, complete todos los campos correctamente.";
+    resultElement.style.color = "red";
+    return;
+  }
+
+  const nuevoRestaurante = {
+    nombre: name,
+    tipo: type,
+    horario: hours,
+    reputacion: reputation
+  };
+
+  restaurantes.push(nuevoRestaurante);
+
+  resultElement.textContent = `Restaurante "${name}" agregado exitosamente.`;
+  resultElement.style.color = "green";
+
+  renderRestaurantes(restaurantes);
+
+  event.target.reset();
+}
+
+
+
