@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 class Titulo extends Component {
   render() {
+    const { titulo, descripcion, imagen } = this.props;
     return (
       <div>
-        <h1>Explora la gastronomía de San José</h1>
-        <p>Descubre los mejores restaurantes y platos típicos de nuestra comunidad.</p>
+        <h1>{titulo}</h1>
+        <p>{descripcion}</p>
         <img 
-          src="https://i0.wp.com/recetaskwa.com/wp-content/uploads/2023/09/ceviche_camaron.jpg?ssl=1"
-          alt="Plato típico ecuatoriano" 
+          src={imagen}
+          alt="Imagen de ñañEC" 
           width={300} 
         />
       </div>
