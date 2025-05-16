@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ñanEC - Gastronomía de San José</title>
   <!--CSS EXTERNO-->
-  <link rel="stylesheet" href="styles.css"> 
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header>
     <h1>Bienvenidos a ñanEC</h1>
@@ -23,9 +25,27 @@
   <!-- Sección de bienvenida -->
   <section id="intro">
     <div class="intro-content">
-        <h2>Descubre la mejor gastronomía de San José</h2>
-        <p>Explora los mejores restaurantes y platos típicos de la región.</p>
+      <h2>Descubre la mejor gastronomía de San José</h2>
+      <p>Explora los mejores restaurantes y platos típicos de la región.</p>
       <img src="./img/Plato_tipico.jfif" alt="Plato típico de San José" style="height: 250px;">
+    </div>
+  </section>
+
+  <!--formulario para añadir restaurante por id -->
+  <section id="add-restaurant">
+    <div class="add-restaurant-form">
+      <h3>Añadir Restaurante</h3>
+
+      <form id="formulario" onsubmit="addRestaurant(event);">
+        <input type="text" id="nameR" placeholder="Nombre del restaurante" required>
+        <input type="text" id="tipoR" placeholder="Tipo de comida" required>
+        <input type="text" id="horarioR" placeholder="Horario (ej. 12:00 - 22:00)" required>
+        <input type="number" id="rankingR" placeholder="Ranking (1-5)" min="1" max="5" required>
+        <button type="submit">Añadir Restaurante</button>
+
+      </form>
+
+      <p id="add-result"></p> <!-- Muestra el resultado aquí -->
     </div>
   </section>
 
@@ -60,7 +80,7 @@
       <p>Tipo de comida: Parrillada</p>
       <p>Horario: 12:00 - 23:00</p>
     </div>-->
-    
+
   </section>
   <!-- Fin de código nuevo -->
 
@@ -70,4 +90,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>

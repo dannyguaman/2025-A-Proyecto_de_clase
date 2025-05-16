@@ -4,7 +4,7 @@ const restaurantes = [
   { nombre: "Café del Valle", tipo: "Cafetería", horario: "08:00 - 20:00", ranking: 4 },
   { nombre: "La Parrilla de San José", tipo: "Parrillada", horario: "12:00 - 23:00", ranking: 4.7 },
   { nombre: "Tortillas tradicionales", tipo: "Tradicinal", horario: "13:00 - 21:00", ranking: 4.2 },
-  { nombre: "Guadalajara", tipo: "Comida Mexicana", horario: "10:00 - 20:00" , ranking: 4.6 },
+  { nombre: "Guadalajara", tipo: "Comida Mexicana", horario: "10:00 - 20:00", ranking: 4.6 },
   { nombre: "Sushi World", tipo: "Comida Japonesa", horario: "11:00 - 22:00", ranking: 4.8 },
   { nombre: "Pasta Fresca", tipo: "Italiana", horario: "12:00 - 21:00", ranking: 4.3 },
   { nombre: "Pizza Express", tipo: "Pizzería", horario: "10:00 - 23:00", ranking: 4.1 },
@@ -20,24 +20,24 @@ function renderRestaurantes(lista) {
   lista.forEach(restaurante => {
     const restaurantDiv = document.createElement('div');
     restaurantDiv.classList.add('restaurant-item');
-    
+
     const nombre = document.createElement('h4');
     nombre.textContent = restaurante.nombre;
-    
+
     const tipo = document.createElement('p');
     tipo.textContent = `Tipo de comida: ${restaurante.tipo}`;
-    
+
     const horario = document.createElement('p');
     horario.textContent = `Horario: ${restaurante.horario}`;
 
     const ranking = document.createElement('p');
     ranking.textContent = `Ranking: ${restaurante.ranking}`;
-    
+
     restaurantDiv.appendChild(nombre);
     restaurantDiv.appendChild(tipo);
     restaurantDiv.appendChild(horario);
     restaurantDiv.appendChild(ranking);
-    
+
     container.appendChild(restaurantDiv);
   });
 }
@@ -57,8 +57,9 @@ function handleSubmit(event) {
     resultElement.style.color = "red";
     renderRestaurantes(restaurantes); // Muestra la lista completa si el campo está vacío
   } else {
-    const resultados = restaurantes.filter(restaurante => 
-      restaurante.nombre.toLowerCase().includes(input)
+    const resultados = restaurantes.filter(restaurante =>
+      restaurante.nombre.toLowerCase().includes(input) ||
+      restaurante.tipo.toLowerCase().includes(input)
     );
 
     if (resultados.length > 0) {
@@ -77,4 +78,19 @@ function handleSubmit(event) {
 function changeImage() {
   const imageElement = document.getElementById('main-image');
   imageElement.src = "./img/nuevo_plato.jpg"; // Cambiar la imagen al hacer clic
+}
+//funcion para agregar un nuevo restaurante obteniendo por id y push
+
+
+function addRestaurant(event) {
+  event.preventDefault();
+  var restaurante = {
+    nombre: document.getElementById('nameR').value,
+    tipo: document.getElementById('tipoR').value,
+    horario: document.getElementById('horarioR').value,
+    ranking: parseFloat(document.getElementById('rankingR').value)
+  };
+
+  restaurantes.push(restaurante);
+  renderRestaurantes(restaurantes); // Actualiza la lista de restaurantes
 }
