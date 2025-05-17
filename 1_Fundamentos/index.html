@@ -30,6 +30,19 @@
 
   <!-- Sección de búsqueda de restaurantes -->
   <section id="search">
+
+    <div class="formulario"> <h1>prueba</h1></div>
+
+    <div class="add-restaurant-form">
+      <h3>Agregar nuevo restaurante</h3>
+      
+        <input type="text" id="nombre" placeholder="Nombre del restaurante" required>
+        <input type="text" id="tipo" placeholder="Tipo de comida" required>
+        <input type="text" id="horario" placeholder="Horario" required>
+        <input type="number" id="reputacion" placeholder="Reputación (1-5)" min="1" max="5" required>
+        <button type="button" onclick="insertarRestaurante(event); document.getElementById('nombre').value=''; document.getElementById('tipo').value=''; document.getElementById('horario').value=''; document.getElementById('reputacion').value='';">Agregar</button>
+      
+    </div>
     <div class="search-form">
       <h3>Busca tu restaurante favorito</h3>
       <form id="restaurant-search-form" onsubmit="handleSubmit(event);">

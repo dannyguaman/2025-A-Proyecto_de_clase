@@ -67,7 +67,7 @@ function handleSubmit(event) {
     renderRestaurantes(restaurantes); // Muestra la lista completa si el campo está vacío
   } else {
     const resultados = restaurantes.filter(restaurante => 
-      restaurante.nombre.toLowerCase().includes(input)
+      restaurante.nombre.toLowerCase().includes(input) || restaurante.tipo.toLowerCase().includes(input)
     );
 
     if (resultados.length > 0) {
@@ -86,4 +86,21 @@ function handleSubmit(event) {
 function changeImage() {
   const imageElement = document.getElementById('main-image');
   imageElement.src = "./img/nuevo_plato.jpg"; // Cambiar la imagen al hacer clic
+}
+
+
+function insertarRestaurante() {
+  const nombre = document.getElementById('nombre').value;
+  const tipo = document.getElementById('tipo').value;
+  const horario = document.getElementById('horario').value;
+  const reputacion = parseInt(document.getElementById('reputacion').value);
+
+  if (nombre && tipo && horario && reputacion) {
+    const nuevoRestaurante = { nombre, tipo, horario, reputacion };
+    restaurantes.push(nuevoRestaurante);
+    renderRestaurantes(restaurantes);
+    alert("Restaurante agregado exitosamente");
+  } else {
+    alert("Por favor, complete todos los campos.");
+  }
 }
