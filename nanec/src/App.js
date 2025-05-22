@@ -17,7 +17,7 @@ function App() {
             direccion={restaurante.direccion} 
             tipo={restaurante.tipo} 
             imagen={restaurante.imagen} 
-          />
+z          />
         ))
       }
     </div>

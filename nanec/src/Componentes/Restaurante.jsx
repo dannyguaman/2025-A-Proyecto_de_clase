@@ -27,7 +27,7 @@ class Restaurante extends React.Component {
             likes: this.state.likes + 1
         });
     }
-    
+
     render() {
         const {nombre, direccion, tipo}= this.props;
         return(
