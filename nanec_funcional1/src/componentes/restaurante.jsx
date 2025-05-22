@@ -2,15 +2,15 @@
 // no es un framework completo como Angular o Vue.js. 
 // Por lo tanto, no tiene un concepto de "módulos" como tal,
 //  pero puedes organizar tu código en componentes y archivos para mantenerlo modular y reutilizable.
-import React from "react";
-import "./Restaurante.css";
+import React, {useState} from "react";
+import "./restaurante.css";
+
 
 function Restaurante(props) {
-    const { nombre, direccion, tipo } = props;
-    
     const [likes, setLikes] = useState(0);
+    const { nombre, direccion, tipo } = props;
 
-    const handlerLike = () => {
+    function handlerLike(){
         setLikes(likes + 1);
     };
 
@@ -24,7 +24,6 @@ function Restaurante(props) {
         </div>
     );
 }
-
 export default Restaurante;
 
 

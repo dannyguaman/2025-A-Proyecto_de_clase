@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import Restaurante from './componentes/restaurante';
 
 function App() {
+  const restaurantes = [{nombre: "Restaurante El Buen Sabor", direccion: "Av. 10 de Agosto", tipo: "Ecuatoriana", imagen: ""},
+                    {nombre: "Cafetería La Unión", direccion: "10 de Agosto", tipo: "Cafetería"},
+                    {nombre: "La Mexicana", direccion: "La Prensa y La Católica", tipo: "Mexicana"}
+  ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {restaurantes.map((restaurante, index) => (
+        <Restaurante
+          key={index}
+          {...restaurante}
+        />
+      ))}
     </div>
   );
 }
