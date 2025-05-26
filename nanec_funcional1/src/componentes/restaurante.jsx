@@ -7,7 +7,7 @@ import "./restaurante.css";
 
 
 function Restaurante(props) {
-    const { nombre, direccion, tipo } = props;
+    const { nombre, direccion, tipo, onlike, ondislike} = props;
 
     const [preferencia, setPreferencia] = useState(
         {
@@ -34,11 +34,14 @@ function Restaurante(props) {
                 ...prevState,
                 likes: prevState.likes + 1
             }));
+            onlike(); // Llamar a la función onLike pasada como prop
         } else if (tipo === "dislike") {
             setPreferencia(prevState => ({
                 ...prevState,
                 dislikes: prevState.dislikes - 1
             }));
+
+            ondislike(); // Llamar a la función onDislike pasada como prop
         }
     }
     return (
