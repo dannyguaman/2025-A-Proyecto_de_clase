@@ -1,3 +1,6 @@
+import Form from './components/Form'
+import './App.css';
+import React from "react";
 // Vector de restaurantes
 const restaurantes = [
   { nombre: "Restaurante El Buen Sabor", tipo: "Tradicional", horario: "12:00 - 22:00" },
@@ -68,3 +71,26 @@ function changeImage() {
   const imageElement = document.getElementById('main-image');
   imageElement.src = "./img/nuevo_plato.jpg"; // Cambiar la imagen al hacer clic
 }
+
+
+function App() {
+  const [state, setState] = React.useState({
+      nomre: "",
+      direccion: "",
+      tipo: "",
+      reputacion: "",
+      
+  });
+
+  return (
+    
+    <div className="App">
+      <Form state={state} setState={setState} />
+      <div>
+        <MyComponent movies={["The Matrix", "Inception", "Interstellar"]} />
+      </div>
+    </div>
+  );
+}
+
+export default App;
