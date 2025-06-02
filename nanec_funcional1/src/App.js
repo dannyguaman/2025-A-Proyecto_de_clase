@@ -6,6 +6,8 @@ import React, { useState } from 'react';
 function App() {
   const [likestotales, setLikesTot] = useState(0);
   const [mensajeErrorLikes, setMensajeErrorLikes] = useState("");
+
+  
   const handlerTotalLikes = () =>{
     setLikesTot(prevState => {
       setMensajeErrorLikes(""); 

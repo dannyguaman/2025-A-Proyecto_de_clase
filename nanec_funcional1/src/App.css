@@ -42,3 +42,9 @@
   font-size: 20px;
   font-weight: bold;
 }
+
+.Form{
+  border: 2px solid black;
+  border-radius: 2px;
+  
+}
