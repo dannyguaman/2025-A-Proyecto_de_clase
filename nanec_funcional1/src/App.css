@@ -43,7 +43,9 @@
   font-weight: bold;
 }
 
-.Form{
+Form{
+  width: 50%;
+  justify-content: center;
   border: 2px solid black;
   border-radius: 2px;
   
