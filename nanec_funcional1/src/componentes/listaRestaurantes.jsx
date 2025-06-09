@@ -63,10 +63,7 @@ const ListaRestaurantes = () => {
     return (
         <div class="App">
             {restaurantesList.map((restaurante, index) => (
-                <Restaurante
-                    key={index}
-                    {...restaurante}
-                />
+                <Restaurante key ={index} {...restaurante}/>
             ))}
             <Form state={state} setState={setState} onSubmit={handleFormSubmit} />
         </div>

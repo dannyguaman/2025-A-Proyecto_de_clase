@@ -1,0 +1,46 @@
+#tarjeta {
+    margin: 1%;
+    box-sizing: border-box;
+    border: 3px solid #b76383;
+    box-shadow: #910c3f 10px 5px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    width: 95%;
+    text-align: left;
+
+}
+
+#estructura {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    width: 100%;
+    flex: 3;
+}
+
+#avatar{
+    margin: 0.5%;
+    box-sizing: border-box;
+    border-radius: 20px;
+    align-items:left;
+    justify-content: top;
+    width: 2%;
+    height: 2%;
+}
+
+img#logo{
+    width: 1%;
+    height: 10%;
+}
+#bio{
+    margin-left: 1%;
+    text-align: left;
+}
+
+#Eliminar{
+    align-items: center;
+    margin: 0.5%;
+}

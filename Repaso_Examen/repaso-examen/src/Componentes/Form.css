@@ -1,0 +1,47 @@
+
+#nombre-foto{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+#nombre{
+    flex: 1;
+    margin-left: 0.2%;
+    margin-right: 0.5%;
+}
+#foto{
+    flex: 4;
+    margin-left: 0.2%;
+}
+#presentacion{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+#bio{
+    width:99%;
+}
+#lenguajes{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+
+#boton{
+    width:100%;
+    margin: 0.5%;
+    displaY: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+button{
+    width: 10%;
+    justify-content: center ;
+}
