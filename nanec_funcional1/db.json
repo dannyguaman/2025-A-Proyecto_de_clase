@@ -1,0 +1,58 @@
+{
+    "restaurante": [
+        {
+            "id": 1,
+            "nombre": "La Casa de la Pasta",
+            "tipo": "Italiana",
+            "direccion": "Calle del Sol, 123",
+            "telefono": "555-1234"
+        },
+        {
+            "id": 2,
+            "nombre": "El Asador del Campo",
+            "tipo": "Española",
+            "direccion": "Avenida de la Luna, 456",
+            "telefono": "555-5678"
+        },
+        {
+            "id": 3,
+            "nombre": "Sushi World",
+            "tipo": "Japonesa",
+            "direccion": "Plaza del Mar, 789",
+            "telefono": "555-9012"
+        },
+        {
+            "id": 4,
+            "nombre": "Tacos y Más",
+            "tipo": "Mexicana",
+            "direccion": "Calle de la Tierra, 321",
+            "telefono": "555-3456"
+        }
+    ],
+
+    "cliente": [
+        {
+            "id": 1,
+            "nombre": "Juan Pérez",
+            "edad": 35
+        }
+        ,
+        {
+            "id": 2,
+            "nombre": "María García",
+            "edad": 28
+        },
+        {
+            "id": 3,
+            "nombre": "Carlos López",
+            "edad": 42
+        },
+        {
+            "id": 4,
+            "nombre": "Ana Torres",
+            "edad": 30
+        }
+    ]
+}
+
+
