@@ -20,7 +20,6 @@ const ListaRestaurantes = () => {
     const handlerTotalDislikes = () => {
         setLikesTot(prevState => {
             if (prevState > 0) {
-
                 return prevState - 1;
             } else {
                 setMensajeErrorLikes("Los likes no pueden ser negativos");
@@ -34,8 +33,13 @@ const ListaRestaurantes = () => {
         { nombre: "La Mexicana", direccion: "La Prensa y La Católica", tipo: "Mexicana", onlike: handlerTotalLikes, ondislike: handlerTotalDislikes }
     ]
     const [restaurantesList, setRestaurantesList] = useState(restaurantes);
+
+    // Nueva función para eliminar restaurante
+    const handleEliminarRestaurante = (index) => {
+        setRestaurantesList(restaurantesList.filter((_, i) => i !== index));
+    };
+
     const handleFormSubmit = (nuevoRestaurante) => {
-        // Agregar los handlers de like/dislike al nuevo restaurante
         const restauranteConHandlers = {
             ...nuevoRestaurante,
             onlike: handlerTotalLikes,
@@ -51,7 +55,6 @@ const ListaRestaurantes = () => {
             tipo: "",
             reputacion: 0,
         });
-        // Mostrar información del nuevo restaurante registrado
         alert(
             `Nuevo restaurante registrado:\n` +
             `Nombre: ${restauranteConHandlers.nombre}\n` +
@@ -61,9 +64,14 @@ const ListaRestaurantes = () => {
         );
     }
     return (
-        <div class="App">
+        <div className="App">
             {restaurantesList.map((restaurante, index) => (
-                <Restaurante key ={index} {...restaurante}/>
+                <div key={index}>
+                    <Restaurante {...restaurante}/>
+                    <button onClick={() => handleEliminarRestaurante(index)}>
+                        Eliminar
+                    </button>
+                </div>
             ))}
             <Form state={state} setState={setState} onSubmit={handleFormSubmit} />
         </div>
