@@ -5,4 +5,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 1px solid black; /* Borde alrededor del restaurante */
+  border-radius: 10px; /* Bordes redondeados */
+}
+img {
+  width: 10%;
+  height: auto;
+  max-width: 100px; /* Ajusta el tamaño máximo de la imagen */
+  border-radius: 10px; /* Bordes redondeados */
 }

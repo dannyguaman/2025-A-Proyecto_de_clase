@@ -7,7 +7,7 @@ import "./restaurante.css";
 
 
 function Restaurante(props) {
-    const { nombre, direccion, tipo, onlike, ondislike} = props;
+    const { id, nombre, direccion, tipo, imagen} = props;
 
     const [preferencia, setPreferencia] = useState(
         {
@@ -34,18 +34,18 @@ function Restaurante(props) {
                 ...prevState,
                 likes: prevState.likes + 1
             }));
-            onlike(); // Llamar a la función onLike pasada como prop
         } else if (tipo === "dislike") {
             setPreferencia(prevState => ({
                 ...prevState,
                 dislikes: prevState.dislikes - 1
             }));
-
-            ondislike(); // Llamar a la función onDislike pasada como prop
         }
     }
     return (
         <div>
+            <div className="imagen-restaurante">
+                <img src={imagen} alt="Restaurante" />
+            </div>
             <h1>{nombre}</h1>
             <h2>{direccion}</h2>
             <h3>{tipo}</h3>

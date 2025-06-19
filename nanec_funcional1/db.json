@@ -1,62 +1,50 @@
 {
-    "restaurante": [
-        {
-            "id": 1,
-            "nombre": "La Casa de la Pasta",
-            "tipo": "Italiana",
-            "direccion": "Calle del Sol, 123",
-            "imagen":"",
-            "reputacion": 5
-        },
-        {
-            "id": 2,
-            "nombre": "El Asador del Campo",
-            "tipo": "Española",
-            "direccion": "Avenida de la Luna, 456",
-            "imagen":"https://pro.alfaforni.com/wp-content/uploads/2022/10/20220928_142615-scaled.jpg",
-            "reputacion": 5        
-        },
-        {
-            "id": 3,
-            "nombre": "Sushi World",
-            "tipo": "Japonesa",
-            "direccion": "Plaza del Mar, 789",
-            "imagen":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6C6jLvDOyfMNCU18ZPoaR_JgL3GFgPG80BQ&s",
-            "reputacion": 5
-        },
-        {
-            "id": 4,
-            "nombre": "Tacos y Más",
-            "tipo": "Mexicana",
-            "direccion": "Calle de la Tierra, 321",
-            "imagen":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoWiZ5HADICA2cbP4k71pPweaM7qqj_lKISA&s",
-            "reputacion": 5
-        }
-    ],
-
-    "cliente": [
-        {
-            "id": 1,
-            "nombre": "Juan Pérez",
-            "edad": 35
-        }
-        ,
-        {
-            "id": 2,
-            "nombre": "María García",
-            "edad": 28
-        },
-        {
-            "id": 3,
-            "nombre": "Carlos López",
-            "edad": 42
-        },
-        {
-            "id": 4,
-            "nombre": "Ana Torres",
-            "edad": 30
-        }
-    ]
+  "restaurante": [
+    {
+      "id": "7c2a",
+      "nombre": "La Pizzería del Barrio",
+      "tipo": "Italiana",
+      "direccion": "Calle del Sol, 123",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn6u8FpIyQuB3h4Pq4O8clJfhRJQC6BjaCGw&s",
+      "reputacion": 4
+    },
+    {
+      "id": "9ad9",
+      "nombre": "Prueba Post",
+      "direccion": "Calle123",
+      "tipo": "Tradicional",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn6u8FpIyQuB3h4Pq4O8clJfhRJQC6BjaCGw&s",
+      "reputacion": 0
+    },
+    {
+      "id": "28e2",
+      "nombre": "Tienda Mi barrio",
+      "direccion": "Avenida 123",
+      "tipo": "Tienda",
+      "imagen": "https://media.istockphoto.com/id/1018141890/es/foto/copas-de-vino-vac%C3%ADas-dos-sentados-en-un-restaurante-en-una-c%C3%A1lida-tarde-soleada.jpg?s=612x612&w=0&k=20&c=ykP_wg0GFiEgpvpD-0-AWJT3Pt0_bAvhiwe7Vwu-3KQ=",
+      "reputacion": 0
+    }
+  ],
+  "cliente": [
+    {
+      "id": "1",
+      "nombre": "Juan Pérez",
+      "edad": 35
+    },
+    {
+      "id": "2",
+      "nombre": "María García",
+      "edad": 28
+    },
+    {
+      "id": "3",
+      "nombre": "Carlos López",
+      "edad": 42
+    },
+    {
+      "id": "4",
+      "nombre": "Ana Torres",
+      "edad": 30
+    }
+  ]
 }
-
-
