@@ -40,6 +40,7 @@ const ListaRestaurantes = () => {
     };
 
     const handleFormSubmit = (nuevoRestaurante) => {
+        nuevoRestaurante.setLikesTot(nuevoRestaurante.reputacion); // Inicializamos la reputación en 0
         const restauranteConHandlers = {
             ...nuevoRestaurante,
             onlike: handlerTotalLikes,

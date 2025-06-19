@@ -5,28 +5,32 @@
             "nombre": "La Casa de la Pasta",
             "tipo": "Italiana",
             "direccion": "Calle del Sol, 123",
-            "telefono": "555-1234"
+            "imagen":"",
+            "reputacion": 5
         },
         {
             "id": 2,
             "nombre": "El Asador del Campo",
             "tipo": "Española",
             "direccion": "Avenida de la Luna, 456",
-            "telefono": "555-5678"
+            "imagen":"https://pro.alfaforni.com/wp-content/uploads/2022/10/20220928_142615-scaled.jpg",
+            "reputacion": 5        
         },
         {
             "id": 3,
             "nombre": "Sushi World",
             "tipo": "Japonesa",
             "direccion": "Plaza del Mar, 789",
-            "telefono": "555-9012"
+            "imagen":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6C6jLvDOyfMNCU18ZPoaR_JgL3GFgPG80BQ&s",
+            "reputacion": 5
         },
         {
             "id": 4,
             "nombre": "Tacos y Más",
             "tipo": "Mexicana",
             "direccion": "Calle de la Tierra, 321",
-            "telefono": "555-3456"
+            "imagen":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoWiZ5HADICA2cbP4k71pPweaM7qqj_lKISA&s",
+            "reputacion": 5
         }
     ],
 
