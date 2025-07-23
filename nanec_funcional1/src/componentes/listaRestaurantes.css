@@ -1,0 +1,143 @@
+.lista-restaurantes {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(139, 35, 0, 0.15);
+  background-color: #fff;
+}
+
+.lista-restaurantes h2 {
+  color: #C41E3A;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.lista-restaurantes h4 {
+  color: #8B2300;
+  font-weight: 300;
+  margin-top: 1rem;
+}
+
+.lista-restaurantes .restaurante-container {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(139, 35, 0, 0.1);
+}
+
+.lista-restaurantes .restaurante-container h1 {
+  color: #8B0000;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.lista-restaurantes .restaurante-container h2,
+.lista-restaurantes .restaurante-container h3 {
+  color: #A52A2A;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+}
+
+.lista-restaurantes .restaurante-container h4 {
+  color: #CD5C5C;
+  font-weight: 300;
+  margin-top: 1rem;
+}
+
+.lista-restaurantes .preferencia-botones {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.lista-restaurantes .preferencia-botones button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.lista-restaurantes .preferencia-botones button:hover {
+  transform: translateY(-2px);
+}
+
+.lista-restaurantes .btn-like {
+  background-color: #8B0000;
+  color: white;
+}
+
+.lista-restaurantes .btn-dislike {
+  background-color: #CD5C5C;
+  color: black;
+}
+
+.lista-restaurantes .acciones-restaurante {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.lista-restaurantes .acciones-restaurante button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #A52A2A;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.lista-restaurantes .acciones-restaurante button:hover {
+  background-color: #8B0000;
+}
+
+.lista-restaurantes .navegacion {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lista-restaurantes .navegacion a {
+  color: #8B0000;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.lista-restaurantes .navegacion a:hover {
+  background-color: #FFE4E1;
+}
+
+.lista-restaurantes .navegacion button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #A52A2A;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.lista-restaurantes .navegacion button:hover {
+  background-color: #8B0000;
+}
+
+@media (max-width: 480px) {
+  .lista-restaurantes {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .lista-restaurantes .navegacion {
+    flex-direction: column;
+  }
+
+  .lista-restaurantes h2 {
+    font-size: 1.5rem;
+  }
+}

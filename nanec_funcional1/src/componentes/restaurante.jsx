@@ -5,55 +5,52 @@
 import React, {useState} from "react";
 import "./restaurante.css";
 
-
 function Restaurante(props) {
-    const { id, nombre, direccion, tipo, imagen} = props;
+  const {_id, nombre, direccion, tipo, horario, reputacion} = props;
+  const [preferencia, setPreferencia] = useState({
+    likes: reputacion,
+    dislikes: 0,
+  });
 
-    const [preferencia, setPreferencia] = useState(
-        {
-        likes: 0,
-        dislikes: 0,
-        }
-    );
-
-    /*const handlerLike = () => {
-        //setLikes(likes + 1);
-        setLikes(prevState => {
-            return (prevState + 1);
-        })
-    };
-
-    const handlerDislike = () => {
-        setDislikes(prevState => {
-            return (prevState - 1);
-        })
-    }*/
-   const handlerPreferencia = (tipo) => {
-        if (tipo === "like") {
-            setPreferencia(prevState => ({
-                ...prevState,
-                likes: prevState.likes + 1
-            }));
-        } else if (tipo === "dislike") {
-            setPreferencia(prevState => ({
-                ...prevState,
-                dislikes: prevState.dislikes - 1
-            }));
-        }
+  const handlerPreferencia = (tipo) => {
+    if (tipo === "like") {
+      setPreferencia(prevState => ({
+        ...prevState,
+        likes: prevState.likes + 1
+      }));
+    } else if (tipo === "dislike") {
+      setPreferencia(prevState => ({
+        ...prevState,
+        dislikes: prevState.dislikes - 1
+      }));
     }
-    return (
-        <div>
-            <div className="imagen-restaurante">
-                <img src={imagen} alt="Restaurante" />
-            </div>
-            <h1>{nombre}</h1>
-            <h2>{direccion}</h2>
-            <h3>{tipo}</h3>
-            <h4>{preferencia.likes}  {preferencia.dislikes}</h4>
-            <button onClick={() => handlerPreferencia("like")}>Like</button> <button onClick={() => handlerPreferencia("dislike")}>Dislike</button>
-        </div>
-    );
+  }
+
+  return (
+    <div className="restaurante-container">
+      <h1>{nombre}</h1>
+      <h2>Dirección: {direccion}</h2>
+      <h3>Tipo: {tipo}</h3>
+      <h3>Horario de atención: {horario}</h3>
+      <h4>{preferencia.likes} {preferencia.dislikes}</h4>
+      <div className="preferencia-botones">
+        <button 
+          className="btn-like"
+          onClick={() => handlerPreferencia("like")}
+        >
+          Like
+        </button>
+        <button 
+          className="btn-dislike"
+          onClick={() => handlerPreferencia("dislike")}
+        >
+          Dislike
+        </button>
+      </div>
+    </div>
+  );
 }
+
 export default Restaurante;
 
 

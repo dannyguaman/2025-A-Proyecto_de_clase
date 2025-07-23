@@ -11,10 +11,11 @@ import ActualizarRestaurante from './componentes/ActualizarRestaurante';
 function App() {
   const [restaurantes, setRestaurantes] = useState([]);
 
-
+  const baseURL = "http://localhost:8000/api/restaurantes";
   const cargarRestaurantes = () => {
-    axios.get("http://localhost:3001/restaurante") //Patron then y catch se llaman promesas
+    axios.get(baseURL) //Patron then y catch se llaman promesas
       .then(response => {
+        console.log("Restaurantes cargados:", response.data);
         setRestaurantes(response.data);
       })
       .catch((err) => {
@@ -23,7 +24,7 @@ function App() {
   };
 
   const agregarRestaurante = (nuevoRestaurante) => {
-    axios.post("http://localhost:3001/restaurante", nuevoRestaurante)
+    axios.post(baseURL, nuevoRestaurante)
       .then(response => {
         setRestaurantes([...restaurantes, response.data]); // Agrega el nuevo restaurante al estado
       })
@@ -33,7 +34,8 @@ function App() {
   };
 
   const eliminarRestaurante = (eliminado) => {
-    axios.delete(`http://localhost:3001/restaurante/${eliminado.id}`)
+    const id = restaurantes[eliminado]._id; // Obtiene el ID del restaurante a eliminar
+    axios.delete(baseURL+'/'+id)
       .then(() => {
         cargarRestaurantes(); // Vuelve a cargar la lista de restaurantes después de eliminar uno
       })
@@ -43,11 +45,11 @@ function App() {
   };
 
   const actualizarRestaurante = (actualizado) => {
-    
-    axios.put(`http://localhost:3001/restaurante/${actualizado.id}`, actualizado)
+    const id = actualizado._id; // Obtiene el ID del restaurante a actualizar
+    axios.put(baseURL + '/' + id, actualizado)
       .then(response => {
         const nuevosRestaurantes = [...restaurantes];
-        const index = nuevosRestaurantes.findIndex(r => r.id === actualizado.id);
+        const index = nuevosRestaurantes.findIndex(r => r._id === actualizado._id);
         if (index !== -1) {
           nuevosRestaurantes[index] = response.data; // Actualiza el restaurante en el estado
         }
@@ -62,7 +64,6 @@ function App() {
 
   React.useEffect(() => {
     cargarRestaurantes();
-    eliminarRestaurante();
   }, []);
 
 

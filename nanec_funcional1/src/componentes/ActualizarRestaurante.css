@@ -1,0 +1,80 @@
+.formulario-restaurante {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(139, 35, 0, 0.15);
+    background-color: white;
+}
+
+.formulario-restaurante h2 {
+    color: #8B0000;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.formulario-restaurante .grupo-input {
+    width: 90%;
+    margin-bottom: 1rem;
+}
+
+.formulario-restaurante label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #A52A2A;
+    font-weight: 500;
+}
+
+.formulario-restaurante input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #E6E6E6;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.formulario-restaurante input:focus {
+    border-color: #8B0000;
+    outline: none;
+}
+
+.formulario-restaurante input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.formulario-restaurante input[type="number"]::-webkit-inner-spin-button,
+.formulario-restaurante input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.formulario-restaurante button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #8B0000;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 1rem;
+}
+
+.formulario-restaurante button:hover {
+    background-color: #A52A2A;
+}
+
+@media (max-width: 2000px) {
+    .formulario-restaurante {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .formulario-restaurante h2 {
+        font-size: 1.5rem;
+    }
+}

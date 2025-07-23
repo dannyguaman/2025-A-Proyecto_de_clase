@@ -11,9 +11,9 @@ const Form = ({ state, setState, onSubmit }) => {
 
     const handleRegistrar = (event) => {
         event.preventDefault();
-        const { nombre, direccion, tipo, reputacion } = state;
+        const { nombre, direccion, tipo, reputacion, horario } = state;
 
-        if (!nombre || !direccion || !tipo || !reputacion) {
+        if (!nombre || !direccion || !tipo || !reputacion || !horario) {
             alert("Todos los campos son obligatorios");
             return;
         }
@@ -26,7 +26,8 @@ const Form = ({ state, setState, onSubmit }) => {
             nombre: "",
             direccion: "",
             tipo: "",
-            reputacion: 0
+            reputacion: 0,
+            horario: ""
         });
     };
 
@@ -44,9 +45,10 @@ const Form = ({ state, setState, onSubmit }) => {
                 <label htmlFor="Tipo">Tipo: </label>
                 <select id="Tipo" name="tipo" value={state.tipo} onChange={handleChange}>
                     <option value="">Seleccione un tipo</option>
-                    <option value="Tradicional">Tradicional</option>
-                    <option value="Cafeteria">Cafeteria</option>
-                    <option value="Ecuatoriana">Ecuatoriana</option>
+                    <option value="Tradicional">Familiar</option>
+                    <option value="Cafeteria">Rápido</option>
+                    <option value="Ecuatoriana">Gourmet</option>
+                    <option value="Internacional">Internacional</option>
                 </select>
             </div>
             <div className="parametro">
