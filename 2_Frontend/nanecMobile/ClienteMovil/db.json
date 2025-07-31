@@ -1,0 +1,28 @@
+{
+  "restaurantes": [
+    {
+      "id": 1,
+      "nombre": "Pizzería Don Luigi",
+      "tipo": "Italiana",
+      "direccion": "Av. Siempre Viva 123",
+      "reputacion": 4.5,
+      "imagen": "https://cdn-icons-png.flaticon.com/512/2921/2921822.png"
+    },
+    {
+      "id": 2,
+      "nombre": "Sushi Sakura",
+      "tipo": "Japonesa",
+      "direccion": "Calle Tokyo 45",
+      "reputacion": 4.8,
+      "imagen": "https://cdn-icons-png.flaticon.com/512/3075/3075977.png"
+    },
+    {
+      "id": 3,
+      "nombre": "El Criollo",
+      "tipo": "Ecuatoriana",
+      "direccion": "Av. Amazonas y Colón",
+      "reputacion": 4.2,
+      "imagen": "https://cdn-icons-png.flaticon.com/512/3075/3075978.png"
+    }
+  ]
+}

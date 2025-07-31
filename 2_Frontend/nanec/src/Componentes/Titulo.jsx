@@ -6,13 +6,21 @@ class Titulo extends Component {
     this.state = {
       consultas: 0
     };
+    // this.manejarClickConsultas = this.manejarClickConsultas.bind(this);
+    this.manejarClickConsultas = this.manejarClickConsultas.bind(this);
   }
 
-  manejarClickConsultas = () => {
-    this.setState((prevState) => ({
-      consultas: prevState.consultas + 1
+  /*manejarClickConsultas = () => {
+    this.setState((prevState => {
+      return {consultas: prevState.consultas + 1}
     }));
-  };
+  };*/
+
+  manejarClickConsultas () {
+    this.setState((prevState) => {
+      return { consultas: prevState.consultas + 1 };
+    });
+  }
 
   render() {
     const { titulo, descripcion, imagen } = this.props;
