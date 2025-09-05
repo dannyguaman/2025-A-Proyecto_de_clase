@@ -1,0 +1,78 @@
+#gris{
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+   padding: 1.5%;
+    height: 93%;
+    width: 97%;
+
+}
+#verde{
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    color: black;
+    height: 20%;
+    width: 100%;
+    color: white;
+
+}
+#inferior{
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    width: 99.9%;  
+}
+
+#azul{
+    display: flex;
+    flex-direction: row;
+    margin: 2% 2% 0% 0%;
+    background-color: blue;
+    width: 20%;
+    height: 75%;
+}
+#izquierda{
+    display: flex;
+    flex-direction: column;
+    margin: 2% 0% 0% 2%;
+    background-color: red;
+    width: 80%;
+    height: 95%;
+}
+
+#superior{
+    display: flex;
+    flex-direction: row;
+    margin: 2% 0% 0% -2%;
+    width: 100%;
+    width: 99%;
+    height: 50%;
+}
+
+#amarillo{
+    display: flex;
+    justify-content: space-around;
+    margin: 0% 2% 2% 2%;
+    background-color: yellow;
+    width: 100%;
+    height: 100%;
+
+}
+
+#morado{
+    display: flex;
+    flex-direction: row;
+    margin: 5% 0% 0% 2%;
+    background-color: blueviolet;
+    width: 93%;
+    height: 25%;
+}
+
+
+
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
